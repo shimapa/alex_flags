@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="9" fill="#c22f1b"/>
+  <g transform="rotate(-38 32 32)">
+    <!-- fringe -->
+    <g stroke="#f4ecdc" stroke-width="2.2" stroke-linecap="round">
+      <path d="M8 25.5h-5M8 29.8h-5M8 34.2h-5M8 38.5h-5"/>
+      <path d="M56 25.5h5M56 29.8h5M56 34.2h5M56 38.5h5"/>
+    </g>
+    <!-- knitted body -->
+    <rect x="8" y="22" width="48" height="20" rx="1.5" fill="#f4ecdc"/>
+    <rect x="13" y="22" width="5" height="20" fill="#1b1814"/>
+    <rect x="46" y="22" width="5" height="20" fill="#1b1814"/>
+    <rect x="26" y="22" width="12" height="20" fill="#d19a28"/>
+    <rect x="30.5" y="22" width="3" height="20" fill="#1b1814"/>
+  </g>
+</svg>
