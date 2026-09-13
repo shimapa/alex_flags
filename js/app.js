@@ -69,7 +69,7 @@
   }
   const hideTip = () => { tip.hidden = true; };
 
-  /* ------------------------------------------------------------ sidebar & theme */
+  /* ------------------------------------------------------------ sidebar */
   const sidebar = $("#sidebar"), scrim = $("#scrim"), openNav = $("#open-nav");
   const navCountries = byCountry.slice().sort((a, b) => (a[0] === "Special editions") - (b[0] === "Special editions") || a[0].localeCompare(b[0]));
   $("#nav-countries").innerHTML = navCountries.map(([c, n]) =>
@@ -84,15 +84,6 @@
   scrim.addEventListener("click", () => setNav(false));
   sidebar.addEventListener("click", (e) => { if (e.target.closest("a")) setNav(false); });
 
-  const themeBtn = $("#theme-toggle");
-  const syncThemeLabel = () => themeBtn.setAttribute("aria-label", document.documentElement.classList.contains("dark") ? "Switch to light theme" : "Switch to dark theme");
-  syncThemeLabel();
-  themeBtn.addEventListener("click", () => {
-    const dark = document.documentElement.classList.toggle("dark");
-    try { localStorage.setItem("theme", dark ? "dark" : "light"); } catch (e) {}
-    syncThemeLabel();
-    if (/^#\/(map|statistics)/.test(location.hash)) route(); // their colours come from the theme
-  });
 
   /* ------------------------------------------------------------ router */
   const main = $("#main");

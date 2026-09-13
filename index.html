@@ -5,13 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Football scarves — Alex's collection</title>
 <meta name="description" content="A private collection of 784 football scarves from 62 countries: browse every scarf, see where they come from and how the collection grew.">
-<script>
-  // Apply the saved or system theme before first paint, so the page never flashes.
-  try {
-    const saved = localStorage.getItem("theme");
-    if (saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.classList.add("dark");
-  } catch (e) {}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400..700&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -31,8 +24,6 @@ See CREDITS.md.
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></symbol>
     <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1"/></symbol>
     <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
-    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></symbol>
-    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
     <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
     <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
     <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
@@ -58,9 +49,6 @@ See CREDITS.md.
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-head">
       <a class="brand" href="#/items"><span class="logo" aria-hidden="true"><svg><use href="#i-scarf"/></svg></span><span class="wordmark">Scarves</span></a>
-      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark theme">
-        <svg class="ico ico-moon"><use href="#i-moon"/></svg><svg class="ico ico-sun"><use href="#i-sun"/></svg>
-      </button>
     </div>
 
     <div class="sidebar-scroll">
