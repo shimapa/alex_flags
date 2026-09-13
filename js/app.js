@@ -46,6 +46,8 @@
     .map(([key, value]) => ({ key, value, label: HOW[key].label, icon: HOW[key].icon, muted: key === "unrecorded" }))
     .sort((a, b) => a.muted - b.muted || b.value - a.value);
   const newCount = scarves.filter((s) => s.new).length;
+  const clubKey = (s) => (s.badge ? `b${s.badge.replace(/\D/g, "")}` : `n-${fold(s.club.replace(/\(.*?\)/g, "")).trim().replace(/[^\p{L}\p{N}]+/gu, "-")}`);
+  const clubName = (list) => list.map((x) => x.club.replace(/\s*\(.*?\)\s*/g, " ").trim()).sort((a, b) => a.length - b.length)[0];
   $$("[data-stat=total]").forEach((el) => { el.textContent = fmt(total); });
 
   const credits = `
@@ -179,27 +181,54 @@
       q: params.get("q") || "",
       continent: params.get("continent") || "",
       country: params.get("country") || "",
+      club: params.get("club") || "",
       how: params.get("how") || "",
       flags: new Set((params.get("only") || "").split(",").filter(Boolean)),
       sort: params.get("sort") || "album",
       view: params.get("view") || "grid",
     };
-    const inCountry = !!state.country && countOf.has(state.country);
+    const clubScarves = state.club ? scarves.filter((s) => clubKey(s) === state.club) : [];
+    const inClub = clubScarves.length > 0;
+    if (!inClub) state.club = "";
+    const inCountry = !inClub && !!state.country && countOf.has(state.country);
     if (!inCountry) state.country = "";
+    const showHero = !inClub && !inCountry && !(state.q || state.continent || state.how || state.flags.size);
 
-    const scope = inCountry ? scarves.filter((s) => s.country === state.country) : scarves;
+    const scope = inClub ? clubScarves : inCountry ? scarves.filter((s) => s.country === state.country) : scarves;
     const dated = scope.filter((s) => s.year);
     const firstYear = dated.length ? d3.min(dated, (s) => s.year) : null;
     const topHow = d3.rollups(scope.filter((s) => s.how !== "unrecorded"), (v) => v.length, (d) => d.how).sort((a, b) => b[1] - a[1])[0];
+    const club = inClub ? { name: clubName(clubScarves), en: clubScarves.find((x) => x.clubEn)?.clubEn, country: clubScarves[0].country, logo: logoOf(clubScarves[0]) } : null;
 
-    main.innerHTML = `
-      <div class="page">
-        <nav class="crumbs" aria-label="Breadcrumb">
-          <a href="#/items">Collections</a><span>/</span>
-          ${inCountry ? `<a href="#/items">Football scarves</a><span>/</span><strong>${esc(state.country)}</strong>` : `<strong>Football scarves</strong>`}
-        </nav>
+    const crumbs = inClub
+      ? `<a href="#/items">Football scarves</a><span>/</span><a href="#/items?country=${encodeURIComponent(club.country)}">${esc(club.country)}</a><span>/</span><strong${lang(club.name)}>${esc(club.name)}</strong>`
+      : inCountry
+        ? `<a href="#/items">Collections</a><span>/</span><a href="#/items">Football scarves</a><span>/</span><strong>${esc(state.country)}</strong>`
+        : `<a href="#/items">Collections</a><span>/</span><strong>Football scarves</strong>`;
 
-        ${inCountry ? `        <header class="coll-head">
+    const kpis = `
+      <div class="kpis">
+        <div><p class="kpi-label">Items</p><p class="kpi-value">${fmt(scope.length)}</p></div>
+        ${inCountry || inClub ? "" : `<div><p class="kpi-label">Countries</p><p class="kpi-value">${realCountries.length}</p></div>`}
+        <div><p class="kpi-label">Official scarves</p><p class="kpi-value">${scope.filter((s) => s.official).length}</p></div>
+        ${inClub ? "" : `<div><p class="kpi-label">National teams</p><p class="kpi-value">${scope.filter((s) => s.national).length}</p></div>`}
+        <div><p class="kpi-label">${inCountry || inClub ? "First noted" : "Last update"}</p><p class="kpi-value">${inCountry || inClub ? (firstYear || "—") : esc(meta.updatedOn || "—")}</p></div>
+      </div>`;
+
+    const header = showHero ? heroHtml() : inClub ? `
+        <header class="coll-head club-head">
+          <div class="coll-icon coll-icon-club" aria-hidden="true">${club.logo ? `<img src="${esc(club.logo)}" alt="">` : flag(club.country)}</div>
+          <div class="coll-text">
+            <div class="coll-title-row">
+              <h1 class="title"${lang(club.name)}>${esc(club.name)}</h1>
+              <a class="badge" href="#/items?country=${encodeURIComponent(club.country)}">${flag(club.country)}${esc(club.country)}</a>
+            </div>
+            ${club.en && club.en !== club.name ? `<p class="item-alt">${esc(club.en)}</p>` : ""}
+            <p class="lede">${scope.length === 1 ? "One scarf" : `${scope.length} scarves`} of this ${clubScarves[0].national ? "team" : "club"} in the collection.</p>
+            ${kpis}
+          </div>
+        </header>` : `
+        <header class="coll-head">
           <div class="coll-icon" aria-hidden="true">${inCountry ? flag(state.country) : `<span class="logo logo-lg"><svg><use href="#i-scarf"/></svg></span>`}</div>
           <div class="coll-text">
             <div class="coll-title-row">
@@ -208,21 +237,21 @@
             </div>
             <p class="lede">${inCountry
               ? `${scope.length} ${plural(scope.length, "scarf", "scarves")} from ${esc(state.country)}${topHow ? `, most of them ${HOW[topHow[0]].label.toLowerCase()}` : ""}.`
-              : `Alex's scarves from clubs and national teams around the world, gathered since ${meta.since}. Almost every one was brought from the city or country its team plays in.`}</p>
-            <div class="kpis">
-              <div><p class="kpi-label">Items</p><p class="kpi-value">${fmt(scope.length)}</p></div>
-              ${inCountry ? "" : `<div><p class="kpi-label">Countries</p><p class="kpi-value">${realCountries.length}</p></div>`}
-              <div><p class="kpi-label">Official scarves</p><p class="kpi-value">${scope.filter((s) => s.official).length}</p></div>
-              <div><p class="kpi-label">National teams</p><p class="kpi-value">${scope.filter((s) => s.national).length}</p></div>
-              <div><p class="kpi-label">${inCountry ? "First noted" : "Last update"}</p><p class="kpi-value">${inCountry ? (firstYear || "—") : esc(meta.updatedOn || "—")}</p></div>
-            </div>
+              : `Alex's scarves from clubs and national teams around the world, gathered since ${meta.since}.`}</p>
+            ${kpis}
           </div>
-        </header>` : heroHtml()}
+        </header>`;
+
+    main.innerHTML = `
+      <div class="page">
+        <nav class="crumbs" aria-label="Breadcrumb">${crumbs}</nav>
+        ${header}
 
         <div class="toolbar">
           <div class="toolbar-row">
             <div class="pills" role="group" aria-label="Continent">
-              ${inCountry ? `<a class="pill" href="#/items">All countries</a><span class="pill is-on">${esc(state.country)}</span>` :
+              ${inClub ? `<a class="pill" href="#/items">All scarves</a><a class="pill" href="#/items?country=${encodeURIComponent(club.country)}">${esc(club.country)}</a><span class="pill is-on"${lang(club.name)}>${esc(club.name)}</span>` :
+                inCountry ? `<a class="pill" href="#/items">All countries</a><span class="pill is-on">${esc(state.country)}</span>` :
                 ["", ...CONTINENTS].map((c) => `<button type="button" class="pill${state.continent === c ? " is-on" : ""}" data-continent="${c}" aria-pressed="${state.continent === c}">${c ? `<span class="pill-dot" style="--c:${CONTINENT_COLOR[c]}"></span>` : ""}${c || "All"}</button>`).join("")}
             </div>
             <div class="toolbar-right">
@@ -263,12 +292,13 @@
         ${credits}
       </div>`;
 
-    if (!inCountry) animateHero();
+    if (showHero) animateHero();
     const PAGE = 96;
     let list = [], shown = 0;
 
     const matches = (s) => {
       if (state.country && s.country !== state.country) return false;
+      if (state.club && clubKey(s) !== state.club) return false;
       if (state.continent && s.continent !== state.continent) return false;
       if (state.q && !fold(state.q).split(/\s+/).every((w) => haystack.get(s.n).includes(w))) return false;
       if (state.how && s.how !== state.how) return false;
@@ -325,7 +355,7 @@
       $("#rows").insertAdjacentHTML("beforeend", next.map(state.view === "list" ? rowHtml : cardHtml).join(""));
       shown += next.length;
       more.innerHTML = shown < list.length ? `<button type="button" class="btn btn-outline" id="more-btn">Show ${Math.min(PAGE, list.length - shown)} more</button>` : "";
-      line.innerHTML = `<span>Showing ${fmt(shown)} of ${fmt(list.length)} ${plural(list.length, "scarf", "scarves")}${state.country ? ` from ${esc(state.country)}` : ""}</span>${state.country ? `<a href="#/items" class="clear">See all scarves in the collection →</a>` : ""}`;
+      line.innerHTML = `<span>Showing ${fmt(shown)} of ${fmt(list.length)} ${plural(list.length, "scarf", "scarves")}${inClub ? ` of ${esc(club.name)}` : state.country ? ` from ${esc(state.country)}` : ""}</span>${inClub || state.country ? `<a href="#/items" class="clear">See all scarves in the collection →</a>` : ""}`;
       syncClear();
     }
 
@@ -333,6 +363,7 @@
 
     function writeHash() {
       const p = new URLSearchParams();
+      if (state.club) p.set("club", state.club);
       if (state.country) p.set("country", state.country);
       if (state.continent) p.set("continent", state.continent);
       if (state.q) p.set("q", state.q);
@@ -422,7 +453,7 @@
         <div class="item">
           <div>
             <div class="photo" id="photo">
-              <a class="club-tag" href="#/items?q=${encodeURIComponent(s.clubEn || s.club)}" title="All scarves of ${esc(s.club)}">
+              <a class="club-tag" href="#/items?club=${encodeURIComponent(clubKey(s))}" title="All scarves of ${esc(s.club)}">
                 <span class="club-tag-string" aria-hidden="true"></span>
                 <span class="club-tag-badge">${logoOf(s) ? `<img src="${esc(logoOf(s))}" alt="">` : flag(s.country)}</span>
                 <span class="club-tag-text"><b${lang(s.club)}>${esc(s.club)}</b><small>${esc(s.country)}${s.national ? " · national team" : ""}</small></span>

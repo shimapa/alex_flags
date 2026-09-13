@@ -561,3 +561,7 @@ button.bar-row:hover .bar-label span:last-child { color: var(--ink); text-decora
   .wall-track, .club-tag { animation: none !important; }
   .wall { overflow-x: auto; }
 }
+
+.coll-icon-club { padding: 14px; background: var(--card); animation: fade-up .6s var(--ease-out) both; }
+.coll-icon-club img { width: 100%; height: 100%; object-fit: contain; }
+.club-head .item-alt { margin-top: 2px; }
