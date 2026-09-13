@@ -565,3 +565,155 @@ button.bar-row:hover .bar-label span:last-child { color: var(--ink); text-decora
 .coll-icon-club { padding: 14px; background: var(--card); animation: fade-up .6s var(--ease-out) both; }
 .coll-icon-club img { width: 100%; height: 100%; object-fit: contain; }
 .club-head .item-alt { margin-top: 2px; }
+
+
+/* =================================================================== Soviet match-programme edition
+   Newsprint paper, constructivist red and ink, ochre and navy accents; condensed poster headings.
+   Everything below overrides the neutral KolleK tokens above; delete this block to go back. */
+:root {
+  --page: #eee5d0;
+  --sidebar: #e5d9bf;
+  --canvas: #f6efe0;
+  --card: #e7dcc4;
+  --pill-group: #e1d4b8;
+  --input: #f8f2e5;
+  --hairline: #c9ba98;
+  --hairline-soft: #dccfb2;
+  --ink: #1b1814;
+  --body: #3a3228;
+  --muted: #6b5f4d;
+  --muted-soft: #807360;
+  --primary: #c22f1b;
+  --on-primary: #f7f0e1;
+
+  --brand: #b8311d;
+  --brand-strong: #7a1f10;
+  --new: #c22f1b;
+  --seq-1: #f0d4c4; --seq-2: #e2a78c; --seq-3: #d17556; --seq-4: #bb482b; --seq-5: #922e19; --seq-6: #5c1b0e;
+  --nodata: #dbcfb5;
+  --ocean: #f3ebd9;
+
+  --c-red: #c22f1b;
+  --c-yellow: #d19a28;
+  --c-blue: #24406d;
+  --c-teal: #3b735d;
+  --c-pink: #8b4354;
+
+  --radius-md: 2px;
+  --radius-lg: 3px;
+  --radius-xl: 4px;
+  --shadow-xs: 0 1px 0 rgba(27, 24, 20, .14);
+  --shadow-sm: 0 1px 0 rgba(27, 24, 20, .18), 0 2px 6px -3px rgba(27, 24, 20, .25);
+  --font: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+  --display: "Oswald", "PT Sans Narrow", "Arial Narrow", sans-serif;
+  --letter: "PT Serif", Georgia, serif;
+}
+.dark {
+  --page: #191612;
+  --sidebar: #1f1b16;
+  --canvas: #231f19;
+  --card: #2b261f;
+  --pill-group: #25201a;
+  --input: #1c1914;
+  --hairline: #3e362b;
+  --hairline-soft: #2f2922;
+  --ink: #f2e9d6;
+  --body: #dacdb4;
+  --muted: #a89a80;
+  --muted-soft: #8e8169;
+  --primary: #e04a2f;
+  --on-primary: #191612;
+  --brand: #e2583a;
+  --brand-strong: #f4a086;
+  --new: #ee6a4e;
+  --seq-1: #3b221a; --seq-2: #63301f; --seq-3: #903d24; --seq-4: #c34e2f; --seq-5: #e6795b; --seq-6: #f6bca5;
+  --nodata: #2d2721;
+  --ocean: #1d1a15;
+  --c-red: #e04a2f;
+  --c-yellow: #e2b04a;
+  --c-blue: #6f8fc9;
+  --c-teal: #5fa487;
+  --c-pink: #c07286;
+}
+
+body { background-color: var(--page); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.sidebar { background-color: var(--sidebar); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+:focus-visible { outline-color: var(--c-red); }
+
+/* poster type */
+h1.title, .hero-title, .box-title, .section-title, .empty-title, .wordmark, .kpi-big, .stat b, .viewer-club {
+  font-family: var(--display); text-transform: uppercase; letter-spacing: .01em;
+}
+h1.title { font-size: 34px; font-weight: 700; line-height: 1.05; }
+.box-title, .section-title { font-size: 17px; font-weight: 600; letter-spacing: .03em; }
+.wordmark { font-size: 20px; font-weight: 700; letter-spacing: .04em; }
+.nav-label, .kpi-label, .row-head, .legend-title, .detail dt { font-family: var(--display); font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
+.nav-label { font-size: 12px; color: var(--c-red); }
+.kpi-value { font-family: var(--display); font-size: 20px; font-weight: 600; }
+.kpi-big { font-size: 34px; font-weight: 700; }
+.logo { background: var(--c-red); color: var(--on-primary); border-radius: 2px; }
+.dark .logo { color: #191612; }
+
+/* stamps, not pills */
+.badge { border-radius: 2px; background: transparent; box-shadow: inset 0 0 0 1px var(--hairline); font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.badge-sm { font-size: 10.5px; padding: 2px 7px; }
+.badge-new { background: var(--c-red); color: var(--on-primary); box-shadow: none; }
+.badge-official { background: color-mix(in srgb, var(--c-yellow) 22%, transparent); color: color-mix(in srgb, var(--c-yellow) 55%, var(--ink)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-yellow) 60%, transparent); }
+.badge-nt { background: transparent; color: var(--c-blue); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-blue) 55%, transparent); }
+.pills { border-radius: 3px; background: var(--pill-group); }
+.pill { border-radius: 2px; font-family: var(--display); font-weight: 500; letter-spacing: .05em; text-transform: uppercase; font-size: 13.5px; }
+.pill.is-on { background: var(--ink); color: var(--page); box-shadow: none; }
+.chip { border-radius: 2px; }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--page); }
+.btn, .icon-btn, .search input, .select, .viewswitch { border-radius: 2px; }
+.nav-link { border-radius: 2px; }
+.nav-link.is-active { background: var(--canvas); box-shadow: inset 3px 0 0 var(--c-red); }
+
+/* hero: a constructivist poster block */
+.hero-stripes { height: 16px; width: min(440px, 72%); gap: 6px; border-radius: 0; transform: skewX(-24deg); transform-origin: left; left: 6px; }
+.hero-stripes i:nth-child(1) { background: var(--c-red); flex: 3; }
+.hero-stripes i:nth-child(2) { background: var(--ink); flex: 1; }
+.hero-stripes i:nth-child(3) { background: var(--c-yellow); flex: 2; }
+.hero-stripes i:nth-child(4) { background: var(--c-blue); flex: 1; }
+.hero-stripes i:nth-child(5) { background: var(--c-red); flex: .5; }
+.hero-title { font-weight: 700; font-size: clamp(40px, 5.6vw, 92px); line-height: .96; letter-spacing: 0; }
+.hero-title .num { color: var(--c-red); }
+.hero-title .num-blue { color: var(--c-blue); }
+.hero-title em { background: var(--c-red); color: var(--on-primary); padding: 0 .14em; margin-right: .06em; }
+.dark .hero-title em { color: #191612; }
+.hero-title em::after { display: none; }
+.hero-lede { font-family: var(--letter); font-size: 17px; font-style: italic; color: var(--body); }
+.stat { border-radius: 2px; background: var(--canvas); box-shadow: inset 0 0 0 1px var(--hairline), inset 0 4px 0 var(--c); padding-top: 16px; }
+.stat:hover { box-shadow: inset 0 0 0 1px var(--ink), inset 0 4px 0 var(--c), 0 10px 20px -14px rgba(27, 24, 20, .5); }
+.stat b { font-size: 34px; font-weight: 700; color: var(--c); }
+.stat span { font-family: var(--display); text-transform: uppercase; letter-spacing: .06em; font-size: 12px; }
+.wall-item { border-radius: 2px; background: color-mix(in srgb, var(--card) 70%, var(--canvas)); }
+.wall-item:hover { background: color-mix(in srgb, var(--c-yellow) 22%, var(--card)); }
+
+/* cards: printed stickers on newsprint */
+.card { border-radius: 3px; background: var(--canvas); }
+.card:hover { border-color: var(--ink); box-shadow: 4px 4px 0 -1px color-mix(in srgb, var(--c-red) 85%, transparent); }
+.card:nth-child(4n+1):hover, .card:nth-child(4n+2):hover, .card:nth-child(4n+3):hover, .card:nth-child(4n+4):hover { border-color: var(--ink); }
+.card-photo { background: var(--card); }
+.card-name { font-weight: 700; }
+.list, .row-thumb, .related a, .box, .details, .note, .kpi-card, .photo, .coll-icon, .empty, .tip { border-radius: 3px; }
+.kpi-card { background: var(--canvas); box-shadow: inset 0 0 0 1px var(--hairline); }
+.kpi-dot { border-radius: 0; transform: skewX(-20deg); }
+.box { background: var(--canvas); }
+.details { background: var(--canvas); box-shadow: inset 0 0 0 1px var(--hairline); }
+.note { font-family: var(--letter); font-size: 16.5px; background: var(--canvas); box-shadow: inset 0 0 0 1px var(--hairline); }
+.tip { background: var(--ink); color: var(--page); }
+
+/* club tag: a match ticket stub */
+.club-tag { border-radius: 2px; background: var(--canvas); padding-right: 16px; box-shadow: inset 0 0 0 1px var(--hairline), 0 12px 24px -12px rgba(27, 24, 20, .45); }
+.club-tag-badge { border-radius: 0; background: transparent; padding-right: 12px; margin-right: 2px; box-shadow: 1px 0 0 0 transparent; border-right: 1.5px dashed var(--hairline); }
+.club-tag::before { background: var(--page); }
+.club-tag-text b { font-size: 15px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
+.club-tag-text small { font-family: var(--display); text-transform: uppercase; letter-spacing: .08em; font-size: 11px; color: var(--c-red); }
+.club-tag:hover { box-shadow: inset 0 0 0 1.5px var(--c-red), 0 12px 24px -12px rgba(27, 24, 20, .45); }
+.coll-icon-club { background: var(--canvas); box-shadow: inset 0 0 0 1px var(--hairline); }
+
+/* charts keep one red series on paper */
+.bar-track { background: var(--card); border-radius: 0; }
+.bar-fill { border-radius: 0; }
+.credits { border-top-style: double; border-top-width: 3px; }
