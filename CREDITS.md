@@ -14,3 +14,5 @@
   notice and this permission notice shall be included in all copies or substantial portions of the
   Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 - **Libraries**: d3 (ISC), topojson-client (ISC), world-atlas / Natural Earth (public domain).
+- **Country flags**: [flag-icons](https://github.com/lipis/flag-icons) by Panayiotis Lipiridis, MIT License
+  (Copyright (c) 2013 Panayiotis Lipiridis), stored in `assets/flags/`.

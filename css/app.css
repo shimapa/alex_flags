@@ -152,8 +152,8 @@ h1.title { margin: 0; font-size: 28px; line-height: 1.2; font-weight: 600; lette
 .dark .badge-official { color: #fbbf24; }
 .badge-nt { background: color-mix(in srgb, var(--brand) 12%, transparent); color: var(--brand); }
 
-.flag { display: inline-block; flex: none; width: 18px; height: 12px; border-radius: 2.5px; box-shadow: inset 0 0 0 1px rgba(17, 17, 17, .14); }
-.dark .flag { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12); }
+.flag { display: inline-block; flex: none; width: 18px; height: 13.5px; border-radius: 2.5px; object-fit: cover; box-shadow: 0 0 0 1px rgba(17, 17, 17, .12); }
+.dark .flag { box-shadow: 0 0 0 1px rgba(255, 255, 255, .14); }
 
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 40px; padding: 0 16px; border-radius: var(--radius-md); border: 1px solid transparent; font-size: 14px; font-weight: 500; white-space: nowrap; transition: background .15s, border-color .15s, color .15s; }
 .btn-primary { background: var(--primary); color: var(--on-primary); }
@@ -178,7 +178,7 @@ h1.title { margin: 0; font-size: 28px; line-height: 1.2; font-weight: 600; lette
 @media (min-width: 640px) { .coll-head { flex-direction: row; align-items: flex-start; } }
 .coll-icon { display: grid; place-items: center; width: 96px; height: 96px; flex: none; border-radius: var(--radius-xl); border: 1px solid var(--hairline); background: var(--card); overflow: hidden; }
 .coll-icon img { width: 100%; height: 100%; object-fit: cover; }
-.coll-icon .flag { width: 54px; height: 36px; border-radius: 5px; }
+.coll-icon .flag { width: 56px; height: 42px; border-radius: 5px; }
 .coll-title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
 .kpis { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 16px; }
 .kpis p { margin: 0; }

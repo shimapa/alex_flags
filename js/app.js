@@ -17,7 +17,9 @@
   const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
   const logoOf = (s) => s.badge || s.logo;
   const flag = (name) => {
-    const stripes = (countries[name] || {}).flag || ["#ccc"];
+    const svg = (countries[name] || {}).flagSvg;
+    if (svg) return `<img class="flag" src="${svg}" alt="" aria-hidden="true" loading="lazy" decoding="async">`;
+    const stripes = (countries[name] || {}).flag || ["#ccc"]; // special editions have no country flag
     const step = 100 / stripes.length;
     return `<span class="flag" style="background:linear-gradient(${stripes.map((c, i) => `${c} ${i * step}% ${(i + 1) * step}%`).join(",")})" aria-hidden="true"></span>`;
   };

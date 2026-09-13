@@ -2,7 +2,8 @@
 
 Run: python3 tools/extract.py
 """
-import glob, html, json, os, re, shutil
+import glob, html, json, os, re, shutil, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from collections import Counter
 
 SRC = os.path.expanduser("~/Desktop/footballscarves.narod.ru")
@@ -189,9 +190,13 @@ for i, r in enumerate(records, 1):
         if re.search(r"[\u0400-\u04ff]", r["club"]):
             scarves[-1]["clubEn"] = match["team"]
 
+from flag_codes import FLAG_CODES  # tools/flag_codes.py
+
 countries = {}
 for disp, iso, cont, flag in COUNTRIES.values():
-    countries[disp] = {"iso": iso, "continent": cont, "flag": flag}
+    code = FLAG_CODES.get(disp)
+    countries[disp] = {"iso": iso, "continent": cont, "flag": flag,
+                       "flagSvg": f"assets/flags/{code}.svg" if code else None}
 
 meta = {"updatedOn": updated_on, "extractedOn": "2026-09-13",
         "source": "https://footballscarves.narod.ru", "owner": "Alex, Moscow", "since": 2003}
