@@ -1,0 +1,2006 @@
+{
+ "Albania|National Team of Albania": {
+  "badge": "assets/badges/135981.png",
+  "team": "Albania",
+  "id": "135981",
+  "query": "Albania"
+ },
+ "Albania|Dinamo Tirane": {
+  "badge": null
+ },
+ "Algeria|Algeria National Team": {
+  "badge": "assets/badges/134516.png",
+  "team": "Algeria",
+  "id": "134516",
+  "query": "Algeria"
+ },
+ "Angola|National Team of Angola": {
+  "badge": "assets/badges/136485.png",
+  "team": "Angola",
+  "id": "136485",
+  "query": "Angola"
+ },
+ "Argentina|Banfield Club Atletico": {
+  "badge": "assets/badges/135154.png",
+  "team": "Banfield",
+  "id": "135154",
+  "query": "banfield"
+ },
+ "Argentina|Boca Juniors Club Atletico Buenos Aires": {
+  "badge": "assets/badges/135156.png",
+  "team": "Boca Juniors",
+  "id": "135156",
+  "query": "boca juniors"
+ },
+ "Argentina|Gimnasia Y Esgrima La Plata": {
+  "badge": "assets/badges/135161.png",
+  "team": "Gimnasia y Esgrima de La Plata",
+  "id": "135161",
+  "query": "Gimnasia Y Esgrima La Plata"
+ },
+ "Argentina|Godoy Cruz Club Deportivo Mendoza": {
+  "badge": "assets/badges/135162.png",
+  "team": "Godoy Cruz",
+  "id": "135162",
+  "query": "godoy cruz deportivo"
+ },
+ "Argentina|Independente Club Atletico": {
+  "badge": null
+ },
+ "Argentina|Racing Club Avellaneda": {
+  "badge": "assets/badges/135170.png",
+  "team": "Racing Club",
+  "id": "135170",
+  "query": "racing"
+ },
+ "Argentina|River Plate Club Atletico Buenos Aires": {
+  "badge": "assets/badges/135171.png",
+  "team": "River Plate",
+  "id": "135171",
+  "query": "river plate"
+ },
+ "Argentina|Rosario Central Club Atletico": {
+  "badge": "assets/badges/135172.png",
+  "team": "Rosario Central",
+  "id": "135172",
+  "query": "Rosario Central Club Atletico"
+ },
+ "Argentina|San Lorenzo Club Atletico": {
+  "badge": null
+ },
+ "Argentina|Union Club Atletico de Santa Fe": {
+  "badge": "assets/badges/135178.png",
+  "team": "Unión",
+  "id": "135178",
+  "query": "Union Club Atletico de Santa Fe"
+ },
+ "Argentina|Velez Sarsfield Club Atletico": {
+  "badge": "assets/badges/135179.png",
+  "team": "Vélez Sarsfield",
+  "id": "135179",
+  "query": "Velez Sarsfield Club Atletico"
+ },
+ "Armenia|National Team of Armenia": {
+  "badge": "assets/badges/136469.png",
+  "team": "Armenia",
+  "id": "136469",
+  "query": "Armenia"
+ },
+ "Armenia|Mika Yerevan": {
+  "badge": "assets/badges/134330.png",
+  "team": "Mika Yerevan",
+  "id": "134330",
+  "query": "Mika Yerevan"
+ },
+ "Austria|National Team of Austria": {
+  "badge": "assets/badges/135986.png",
+  "team": "Austria",
+  "id": "135986",
+  "query": "Austria"
+ },
+ "Austria|Austria Wien": {
+  "badge": "assets/badges/135986.png",
+  "team": "Austria",
+  "id": "135986",
+  "query": "austria"
+ },
+ "Austria|Austria Memphis Wien": {
+  "badge": null
+ },
+ "Austria|GAK Graz": {
+  "badge": null
+ },
+ "Austria|Mattersburg SV": {
+  "badge": "assets/badges/137806.png",
+  "team": "SV Mattersburg",
+  "id": "137806",
+  "query": "Mattersburg SV"
+ },
+ "Austria|Ried SV": {
+  "badge": "assets/badges/133993.png",
+  "team": "SV Ried",
+  "id": "133993",
+  "query": "Ried SV"
+ },
+ "Austria|Tirol Innsbruck": {
+  "badge": "assets/badges/137807.png",
+  "team": "WSG Tirol",
+  "id": "137807",
+  "query": "Tirol Innsbruck"
+ },
+ "Austria|Worgl SV": {
+  "badge": null
+ },
+ "Azerbaijan|Inter Baki": {
+  "badge": null
+ },
+ "Azerbaijan|Khazar Lankaran": {
+  "badge": "assets/badges/134059.png",
+  "team": "Khazar Lenkoran",
+  "id": "134059",
+  "query": "Khazar Lankaran"
+ },
+ "Belarus|Национальная Сборная Республики Беларусь": {
+  "badge": "assets/badges/136454.png",
+  "team": "Belarus",
+  "id": "136454",
+  "query": "Belarus"
+ },
+ "Albania|Partizani Tirane": {
+  "badge": null
+ },
+ "Austria|Rapid Wien": {
+  "badge": null
+ },
+ "Belarus|Барановичи ФК": {
+  "badge": "assets/badges/141320.png",
+  "team": "Baranovichi",
+  "id": "141320",
+  "query": "baranovichi"
+ },
+ "Belarus|БАТЭ Борисов": {
+  "badge": "assets/badges/133946.png",
+  "team": "BATE Borisov",
+  "id": "133946",
+  "query": "bate borisov"
+ },
+ "Belarus|Береза ФК": {
+  "badge": null
+ },
+ "Belarus|Верас Несвиж": {
+  "badge": null
+ },
+ "Belarus|Витебск ФК": {
+  "badge": null
+ },
+ "Belarus|Волна Пинск": {
+  "badge": "assets/badges/139690.png",
+  "team": "Volna Pinsk",
+  "id": "139690",
+  "query": "volna pinsk"
+ },
+ "Belarus|Ганцевичи ФК": {
+  "badge": null
+ },
+ "Belarus|Гомель ФК": {
+  "badge": "assets/badges/134020.png",
+  "team": "Gomel",
+  "id": "134020",
+  "query": "gomel"
+ },
+ "Belarus|Динамо Брест": {
+  "badge": "assets/badges/137901.png",
+  "team": "Dynamo Brest",
+  "id": "137901",
+  "query": "dynamo brest"
+ },
+ "Belarus|Динамо Минск": {
+  "badge": null
+ },
+ "Belarus|Днепр Трансмаш Могилев": {
+  "badge": null
+ },
+ "Belarus|Дарида Ждановичи": {
+  "badge": null
+ },
+ "Belarus|Звезда-БГУ Минск": {
+  "badge": null
+ },
+ "Belarus|Коммунальник Слоним": {
+  "badge": "assets/badges/146245.png",
+  "team": "Slonim City",
+  "id": "146245",
+  "query": "slonim"
+ },
+ "Belarus|Лида ФК": {
+  "badge": "assets/badges/139684.png",
+  "team": "Lida",
+  "id": "139684",
+  "query": "lida"
+ },
+ "Belarus|Ливадия Дзержинск": {
+  "badge": null
+ },
+ "Belarus|Локомотив Барановичи": {
+  "badge": null
+ },
+ "Belarus|Локомотив Минск": {
+  "badge": null
+ },
+ "Belarus|МТЗ РИПО Минск": {
+  "badge": null
+ },
+ "Belarus|Молодечно ФК": {
+  "badge": "assets/badges/142511.png",
+  "team": "Molodechno",
+  "id": "142511",
+  "query": "molodechno"
+ },
+ "Belarus|Нафтан Новополцк": {
+  "badge": null
+ },
+ "Belarus|Неман Гродно": {
+  "badge": "assets/badges/134608.png",
+  "team": "Neman Grodno",
+  "id": "134608",
+  "query": "neman grodno"
+ },
+ "Belarus|Торпедо Минск": {
+  "badge": "assets/badges/137912.png",
+  "team": "Torpedo Minsk",
+  "id": "137912",
+  "query": "torpedo minsk"
+ },
+ "Belarus|Торпедо-СКА Минск": {
+  "badge": null
+ },
+ "Belarus|Химик Светлогорск": {
+  "badge": null
+ },
+ "Belarus|Шахтер Солигорск": {
+  "badge": null
+ },
+ "Belgium|National Team of Belgium (Euro 2000 Holland & Belgium)": {
+  "badge": "assets/badges/134515.png",
+  "team": "Belgium",
+  "id": "134515",
+  "query": "Belgium"
+ },
+ "Belgium|Anderlecht RSC": {
+  "badge": "assets/badges/133776.png",
+  "team": "Anderlecht",
+  "id": "133776",
+  "query": "Anderlecht RSC"
+ },
+ "Belgium|Cercle Brugge": {
+  "badge": "assets/badges/133782.png",
+  "team": "Cercle Brugge",
+  "id": "133782",
+  "query": "Cercle Brugge"
+ },
+ "Belgium|Club Brugge KV": {
+  "badge": "assets/badges/140110.png",
+  "team": "Club NXT",
+  "id": "140110",
+  "query": "Club Brugge KV"
+ },
+ "Belgium|Evergem Center KFC": {
+  "badge": null
+ },
+ "Belgium|Genk KRC": {
+  "badge": "assets/badges/133779.png",
+  "team": "Genk",
+  "id": "133779",
+  "query": "Genk KRC"
+ },
+ "Belgium|Germinal Beerschot Antwerpen": {
+  "badge": null
+ },
+ "Belgium|KAA Gent": {
+  "badge": "assets/badges/133781.png",
+  "team": "Gent",
+  "id": "133781",
+  "query": "KAA Gent"
+ },
+ "Belgium|K. Sint-Truidense VV": {
+  "badge": null
+ },
+ "Belgium|Lokeren KSC": {
+  "badge": "assets/badges/133785.png",
+  "team": "Lokeren",
+  "id": "133785",
+  "query": "Lokeren KSC"
+ },
+ "Belgium|Mechelen KV": {
+  "badge": "assets/badges/133787.png",
+  "team": "Mechelen",
+  "id": "133787",
+  "query": "Mechelen KV"
+ },
+ "Belgium|Royal Excelsior Mouscron": {
+  "badge": null
+ },
+ "Belgium|Standard de Liege": {
+  "badge": "assets/badges/146376.png",
+  "team": "SL16",
+  "id": "146376",
+  "query": "Standard de Liege"
+ },
+ "Belgium|Westerlo KVC": {
+  "badge": "assets/badges/133790.png",
+  "team": "Westerlo",
+  "id": "133790",
+  "query": "westerlo"
+ },
+ "Belgium|Zulte Waregem SV": {
+  "badge": "assets/badges/133786.png",
+  "team": "Zulte Waregem",
+  "id": "133786",
+  "query": "zulte waregem"
+ },
+ "Bolivia|Club Destroyers Santa Cruz": {
+  "badge": null
+ },
+ "Bosnia & Herzegovina|National Team of Bosnia & Herzegovina": {
+  "badge": null
+ },
+ "Bosnia & Herzegovina|Željezničar (The Maniacs)": {
+  "badge": "assets/badges/137934.png",
+  "team": "Željezničar Sarajevo",
+  "id": "137934",
+  "query": "Željezničar"
+ },
+ "Bosnia & Herzegovina|Velez Mostar (Red Army)": {
+  "badge": "assets/badges/137941.png",
+  "team": "Velež Mostar",
+  "id": "137941",
+  "query": "Velez Mostar"
+ },
+ "Brazil|Corinthians Paulista SC": {
+  "badge": "assets/badges/134284.png",
+  "team": "Corinthians",
+  "id": "134284",
+  "query": "Corinthians Paulista SC"
+ },
+ "Brazil|Paranaense CA": {
+  "badge": "assets/badges/134297.png",
+  "team": "Athletico Paranaense",
+  "id": "134297",
+  "query": "Paranaense CA"
+ },
+ "Bulgaria|Национальная сборная Болгарии (Euro 2004 Portugal)": {
+  "badge": "assets/badges/136461.png",
+  "team": "Bulgaria",
+  "id": "136461",
+  "query": "Bulgaria"
+ },
+ "Bulgaria|Академик 1947 София": {
+  "badge": null
+ },
+ "Bulgaria|Берое Стара Загора": {
+  "badge": null
+ },
+ "Bulgaria|Ботев Враца": {
+  "badge": null
+ },
+ "Bulgaria|Ботев Криводол": {
+  "badge": null
+ },
+ "Bulgaria|Ботев Пловдив": {
+  "badge": "assets/badges/134343.png",
+  "team": "Botev Plovdiv",
+  "id": "134343",
+  "query": "botev plovdiv"
+ },
+ "Bulgaria|Видима-Раковски Севлиево": {
+  "badge": null
+ },
+ "Bulgaria|Добруджа Добрич": {
+  "badge": "assets/badges/140765.png",
+  "team": "Dobrudzha Dobrich",
+  "id": "140765",
+  "query": "dobrudzha dobric"
+ },
+ "Bulgaria|Дунав Русе": {
+  "badge": "assets/badges/137918.png",
+  "team": "Dunav Ruse",
+  "id": "137918",
+  "query": "dunav ruse"
+ },
+ "Bulgaria|Левски 2004 Карлово": {
+  "badge": null
+ },
+ "Bulgaria|Левски София": {
+  "badge": "assets/badges/134085.png",
+  "team": "Levski Sofia",
+  "id": "134085",
+  "query": "levski sofia"
+ },
+ "Bulgaria|Литекс Ловеч": {
+  "badge": "assets/badges/134610.png",
+  "team": "Litex Lovech",
+  "id": "134610",
+  "query": "litex lovech"
+ },
+ "Bulgaria|Локомотив Мездра (Ultra Bad Boys)": {
+  "badge": null
+ },
+ "Bulgaria|Локомотив Пловдив": {
+  "badge": "assets/badges/134092.png",
+  "team": "Lokomotiv Plovdiv",
+  "id": "134092",
+  "query": "lokomotiv plovdiv"
+ },
+ "Bulgaria|Локомотив София": {
+  "badge": "assets/badges/140769.png",
+  "team": "Lokomotiv Sofia",
+  "id": "140769",
+  "query": "lokomotiv sofia"
+ },
+ "Bulgaria|Марица Пловдив": {
+  "badge": null
+ },
+ "Bulgaria|Миньор Перник (hooligans)": {
+  "badge": "assets/badges/140771.png",
+  "team": "Minyor Pernik",
+  "id": "140771",
+  "query": "minyor pernik"
+ },
+ "Bulgaria|Нефтохимик Бургас": {
+  "badge": null
+ },
+ "Bulgaria|Пирин Благоевград": {
+  "badge": "assets/badges/140773.png",
+  "team": "Pirin Blagoevgrad",
+  "id": "140773",
+  "query": "pirin blagoevgrad"
+ },
+ "Bulgaria|Рома Спорт Димитровград": {
+  "badge": null
+ },
+ "Bulgaria|Славия София": {
+  "badge": "assets/badges/137914.png",
+  "team": "Slavia Sofia",
+  "id": "137914",
+  "query": "slavia sofia"
+ },
+ "Bulgaria|Спартак Варна (Ultras)": {
+  "badge": "assets/badges/142832.png",
+  "team": "Spartak Varna",
+  "id": "142832",
+  "query": "spartak varna"
+ },
+ "Bulgaria|Спартак Пловдив": {
+  "badge": "assets/badges/148378.png",
+  "team": "Spartak Plovdiv",
+  "id": "148378",
+  "query": "spartak plovdiv"
+ },
+ "Bulgaria|Хебър Пазарджик": {
+  "badge": null
+ },
+ "Bulgaria|ЦСКА София": {
+  "badge": "assets/badges/134088.png",
+  "team": "CSKA Sofia",
+  "id": "134088",
+  "query": "cska sofia"
+ },
+ "Bulgaria|Черно Море Варна": {
+  "badge": null
+ },
+ "Chile|Universidad Catolica Club Deportivo": {
+  "badge": "assets/badges/137735.png",
+  "team": "Universidad Católica",
+  "id": "137735",
+  "query": "universidad catolica"
+ },
+ "Chile|Universidad de Chile Club de Futbol": {
+  "badge": "assets/badges/137736.png",
+  "team": "Universidad de Chile",
+  "id": "137736",
+  "query": "universidad chile"
+ },
+ "Colombia|National Team of Colombia": {
+  "badge": "assets/badges/134501.png",
+  "team": "Colombia",
+  "id": "134501",
+  "query": "Colombia"
+ },
+ "Croatia|National Team of Croatia": {
+  "badge": "assets/badges/133912.png",
+  "team": "Croatia",
+  "id": "133912",
+  "query": "Croatia"
+ },
+ "Croatia|Dinamo Zagreb": {
+  "badge": "assets/badges/133961.png",
+  "team": "Dinamo Zagreb",
+  "id": "133961",
+  "query": "Dinamo Zagreb"
+ },
+ "Croatia|Hajduk Split": {
+  "badge": "assets/badges/134019.png",
+  "team": "Hajduk Split",
+  "id": "134019",
+  "query": "Hajduk Split"
+ },
+ "Czechia|National Team of Czech Republic": {
+  "badge": "assets/badges/133904.png",
+  "team": "Czech Republic",
+  "id": "133904",
+  "query": "Czech Republic"
+ },
+ "Czechia|1.FC Brno": {
+  "badge": "assets/badges/141110.png",
+  "team": "Artis Brno",
+  "id": "141110",
+  "query": "brno"
+ },
+ "Czechia|Bohemians 1905 Praha": {
+  "badge": "assets/badges/136681.png",
+  "team": "Bohemians 1905",
+  "id": "136681",
+  "query": "Bohemians 1905 Praha"
+ },
+ "Czechia|Dynamo SK Ceske Budejovice": {
+  "badge": "assets/badges/137808.png",
+  "team": "Dynamo České Budějovice",
+  "id": "137808",
+  "query": "Dynamo SK Ceske Budejovice"
+ },
+ "Czechia|Mus Most": {
+  "badge": null
+ },
+ "Czechia|Marila Příbram FK": {
+  "badge": null
+ },
+ "Czechia|Siad Most": {
+  "badge": null
+ },
+ "Czechia|Slavia Praha SK": {
+  "badge": "assets/badges/136036.png",
+  "team": "Slavia Prague",
+  "id": "136036",
+  "query": "Slavia Praha SK"
+ },
+ "Czechia|Slovan Liberec": {
+  "badge": "assets/badges/133954.png",
+  "team": "Slovan Liberec",
+  "id": "133954",
+  "query": "Slovan Liberec"
+ },
+ "Czechia|Sparta Praha AC": {
+  "badge": "assets/badges/134007.png",
+  "team": "Sparta Prague",
+  "id": "134007",
+  "query": "Sparta Praha AC"
+ },
+ "Denmark|National Team of Denmark (Euro 1996 England)": {
+  "badge": "assets/badges/133906.png",
+  "team": "Denmark",
+  "id": "133906",
+  "query": "Denmark"
+ },
+ "Denmark|National Team of Denmark": {
+  "badge": "assets/badges/133906.png",
+  "team": "Denmark",
+  "id": "133906",
+  "query": "Denmark"
+ },
+ "Denmark|Akademisk Boldklub": {
+  "badge": "assets/badges/141778.png",
+  "team": "AB Gladsaxe",
+  "id": "141778",
+  "query": "Akademisk Boldklub"
+ },
+ "Denmark|Bronby IF": {
+  "badge": null
+ },
+ "Denmark|Ikast FS": {
+  "badge": null
+ },
+ "Denmark|Kobenhavn FC": {
+  "badge": null
+ },
+ "Ecuador|Barcelona S.C.": {
+  "badge": null
+ },
+ "Egypt|Al Ahly Cairo": {
+  "badge": "assets/badges/138995.png",
+  "team": "Al Ahly",
+  "id": "138995",
+  "query": "Al Ahly Cairo"
+ },
+ "England|National Team of England": {
+  "badge": "assets/badges/133914.png",
+  "team": "England",
+  "id": "133914",
+  "query": "England"
+ },
+ "England|Arsenal London": {
+  "badge": "assets/badges/133604.png",
+  "team": "Arsenal",
+  "id": "133604",
+  "query": "arsenal"
+ },
+ "England|Barnsley FC": {
+  "badge": "assets/badges/133630.png",
+  "team": "Barnsley",
+  "id": "133630",
+  "query": "Barnsley FC"
+ },
+ "England|Blackburn Rovers FC": {
+  "badge": "assets/badges/133598.png",
+  "team": "Blackburn Rovers",
+  "id": "133598",
+  "query": "Blackburn Rovers FC"
+ },
+ "England|Bolton FC": {
+  "badge": "assets/badges/133606.png",
+  "team": "Bolton Wanderers",
+  "id": "133606",
+  "query": "Bolton FC"
+ },
+ "England|Bournemouth AFC": {
+  "badge": "assets/badges/134301.png",
+  "team": "Bournemouth",
+  "id": "134301",
+  "query": "Bournemouth AFC"
+ },
+ "England|Bradford City": {
+  "badge": "assets/badges/134189.png",
+  "team": "Bradford City",
+  "id": "134189",
+  "query": "Bradford City"
+ },
+ "England|Brighton & Hove Albion": {
+  "badge": null
+ },
+ "England|Charlton AFC London": {
+  "badge": "assets/badges/133851.png",
+  "team": "Charlton Athletic",
+  "id": "133851",
+  "query": "charlton"
+ },
+ "England|Chelsea London": {
+  "badge": "assets/badges/133610.png",
+  "team": "Chelsea",
+  "id": "133610",
+  "query": "chelsea"
+ },
+ "England|Chesterfield FC": {
+  "badge": "assets/badges/134366.png",
+  "team": "Chesterfield",
+  "id": "134366",
+  "query": "Chesterfield FC"
+ },
+ "England|Colchester United": {
+  "badge": "assets/badges/133874.png",
+  "team": "Colchester United",
+  "id": "133874",
+  "query": "Colchester United"
+ },
+ "England|Doncaster Rovers FC": {
+  "badge": "assets/badges/133620.png",
+  "team": "Doncaster Rovers",
+  "id": "133620",
+  "query": "Doncaster Rovers FC"
+ },
+ "England|Ipswich Town": {
+  "badge": "assets/badges/133622.png",
+  "team": "Ipswich Town",
+  "id": "133622",
+  "query": "Ipswich Town"
+ },
+ "England|Leeds United AFC": {
+  "badge": null
+ },
+ "England|Leicester City": {
+  "badge": "assets/badges/133626.png",
+  "team": "Leicester City",
+  "id": "133626",
+  "query": "Leicester City"
+ },
+ "England|Liverpool FC": {
+  "badge": "assets/badges/133602.png",
+  "team": "Liverpool",
+  "id": "133602",
+  "query": "liverpool"
+ },
+ "England|Liverpool FC (2)": {
+  "badge": "assets/badges/133602.png",
+  "team": "Liverpool",
+  "id": "133602",
+  "query": "liverpool"
+ },
+ "England|Luton Town FC": {
+  "badge": "assets/badges/133888.png",
+  "team": "Luton Town",
+  "id": "133888",
+  "query": "Luton Town FC"
+ },
+ "England|Manchester City": {
+  "badge": "assets/badges/133613.png",
+  "team": "Manchester City",
+  "id": "133613",
+  "query": "Manchester City"
+ },
+ "England|Manchester United": {
+  "badge": "assets/badges/133612.png",
+  "team": "Manchester United",
+  "id": "133612",
+  "query": "Manchester United"
+ },
+ "England|Manchester United (two sides)": {
+  "badge": "assets/badges/133612.png",
+  "team": "Manchester United",
+  "id": "133612",
+  "query": "Manchester United"
+ },
+ "England|Margate FC": {
+  "badge": "assets/badges/137954.png",
+  "team": "Margate",
+  "id": "137954",
+  "query": "Margate FC"
+ },
+ "England|Middlesbrough FC": {
+  "badge": "assets/badges/133628.png",
+  "team": "Middlesbrough",
+  "id": "133628",
+  "query": "Middlesbrough FC"
+ },
+ "England|Newcastle United FC": {
+  "badge": "assets/badges/134777.png",
+  "team": "Newcastle United",
+  "id": "134777",
+  "query": "Newcastle United FC"
+ },
+ "England|Nottingham Forest FC": {
+  "badge": null
+ },
+ "England|Oldham Athletic AFC": {
+  "badge": null
+ },
+ "England|Runcorn FC": {
+  "badge": "assets/badges/148364.png",
+  "team": "Runcorn",
+  "id": "148364",
+  "query": "Runcorn FC"
+ },
+ "England|Scunthorpe United FC": {
+  "badge": "assets/badges/133810.png",
+  "team": "Scunthorpe United",
+  "id": "133810",
+  "query": "Scunthorpe United FC"
+ },
+ "England|Southampton FC": {
+  "badge": "assets/badges/134778.png",
+  "team": "Southampton",
+  "id": "134778",
+  "query": "Southampton FC"
+ },
+ "England|Sheffield United": {
+  "badge": "assets/badges/133811.png",
+  "team": "Sheffield United",
+  "id": "133811",
+  "query": "Sheffield United"
+ },
+ "England|Tottenham London": {
+  "badge": null
+ },
+ "England|Queens Park Rangers London": {
+  "badge": "assets/badges/133605.png",
+  "team": "Queens Park Rangers",
+  "id": "133605",
+  "query": "queens park rangers"
+ },
+ "England|Watford F.C.": {
+  "badge": null
+ },
+ "England|Wealdstone FC": {
+  "badge": "assets/badges/135975.png",
+  "team": "Wealdstone",
+  "id": "135975",
+  "query": "Wealdstone FC"
+ },
+ "England|West Bromwich Albion FC": {
+  "badge": "assets/badges/133611.png",
+  "team": "West Bromwich Albion",
+  "id": "133611",
+  "query": "West Bromwich Albion FC"
+ },
+ "England|Wimbledon F.C.": {
+  "badge": null
+ },
+ "Estonia|National Team of Estonia": {
+  "badge": "assets/badges/136453.png",
+  "team": "Estonia",
+  "id": "136453",
+  "query": "Estonia"
+ },
+ "Estonia|Ajax Lasnamae": {
+  "badge": null
+ },
+ "Estonia|Eurouniv Tallinn": {
+  "badge": null
+ },
+ "Estonia|Flora Tallinn": {
+  "badge": "assets/badges/133967.png",
+  "team": "Flora Tallinn",
+  "id": "133967",
+  "query": "Flora Tallinn"
+ },
+ "Estonia|Kalju Nomme": {
+  "badge": "assets/badges/134060.png",
+  "team": "Nõmme Kalju",
+  "id": "134060",
+  "query": "Kalju Nomme"
+ },
+ "Estonia|Kalev Tallinn": {
+  "badge": null
+ },
+ "Estonia|Kuressaare FC": {
+  "badge": "assets/badges/139044.png",
+  "team": "Kuressaare",
+  "id": "139044",
+  "query": "Kuressaare FC"
+ },
+ "Estonia|Levadia Tallinn": {
+  "badge": "assets/badges/134046.png",
+  "team": "Levadia Tallinn",
+  "id": "134046",
+  "query": "Levadia Tallinn"
+ },
+ "Estonia|Lootos Polva": {
+  "badge": null
+ },
+ "Estonia|Sport ESK Tallinn": {
+  "badge": null
+ },
+ "Estonia|Parnu JK": {
+  "badge": "assets/badges/147053.png",
+  "team": "Pärnu JK Tervis",
+  "id": "147053",
+  "query": "Parnu JK"
+ },
+ "Estonia|Pirita Tallinn": {
+  "badge": null
+ },
+ "Estonia|Pusivus Kohila JK": {
+  "badge": null
+ },
+ "Estonia|TVMK Tallinn": {
+  "badge": "assets/badges/147711.png",
+  "team": "FC TVMK",
+  "id": "147711",
+  "query": "tvmk"
+ },
+ "Estonia|Twister Tallinn": {
+  "badge": null
+ },
+ "Estonia|Vaprus Parnu": {
+  "badge": "assets/badges/137980.png",
+  "team": "Pärnu Vaprus",
+  "id": "137980",
+  "query": "Vaprus Parnu"
+ },
+ "France|National Team of France (Euro 2008 Austria&Switzerland)": {
+  "badge": "assets/badges/133913.png",
+  "team": "France",
+  "id": "133913",
+  "query": "France"
+ },
+ "France|LOSC Lille": {
+  "badge": null
+ },
+ "France|Nice": {
+  "badge": "assets/badges/133712.png",
+  "team": "Nice",
+  "id": "133712",
+  "query": "Nice"
+ },
+ "France|Olympique Lyonnais": {
+  "badge": "assets/badges/133713.png",
+  "team": "Lyon",
+  "id": "133713",
+  "query": "Olympique Lyonnais"
+ },
+ "France|Olympique Marseille": {
+  "badge": "assets/badges/133707.png",
+  "team": "Marseille",
+  "id": "133707",
+  "query": "Olympique Marseille"
+ },
+ "France|Racing Strasbourg": {
+  "badge": "assets/badges/133882.png",
+  "team": "Strasbourg",
+  "id": "133882",
+  "query": "Racing Strasbourg"
+ },
+ "France|Sports Olympiques de Pont de Cheruy Chavanoz": {
+  "badge": null
+ },
+ "France|Paris Saint Germain": {
+  "badge": "assets/badges/133714.png",
+  "team": "Paris Saint-Germain",
+  "id": "133714",
+  "query": "Paris Saint Germain"
+ },
+ "Georgia|National Team of Georgia": {
+  "badge": null
+ },
+ "Georgia|Dinamo Tbilisi": {
+  "badge": "assets/badges/134385.png",
+  "team": "Dinamo Tbilisi",
+  "id": "134385",
+  "query": "Dinamo Tbilisi"
+ },
+ "Georgia|Zestafoni FC": {
+  "badge": "assets/badges/133969.png",
+  "team": "FC Zestafoni",
+  "id": "133969",
+  "query": "Zestafoni FC"
+ },
+ "Germany|National team of Germany (World Cup 1998 France)": {
+  "badge": "assets/badges/133907.png",
+  "team": "Germany",
+  "id": "133907",
+  "query": "Germany"
+ },
+ "Germany|National team of Germany (World Cup 2006 Germany)": {
+  "badge": "assets/badges/133907.png",
+  "team": "Germany",
+  "id": "133907",
+  "query": "Germany"
+ },
+ "Germany|National team of Germany (Euro 2008 Austria&Switzerland)": {
+  "badge": "assets/badges/133907.png",
+  "team": "Germany",
+  "id": "133907",
+  "query": "Germany"
+ },
+ "Germany|Alemannia Aachen": {
+  "badge": "assets/badges/134210.png",
+  "team": "Alemannia Aachen",
+  "id": "134210",
+  "query": "Alemannia Aachen"
+ },
+ "Germany|Bayer 04 Leverkusen": {
+  "badge": "assets/badges/133666.png",
+  "team": "Bayer Leverkusen",
+  "id": "133666",
+  "query": "Bayer 04 Leverkusen"
+ },
+ "Germany|Bayern Munchen": {
+  "badge": null
+ },
+ "Germany|Bayern Munchen eV": {
+  "badge": null
+ },
+ "Germany|Borussia Dortmund": {
+  "badge": "assets/badges/133650.png",
+  "team": "Borussia Dortmund",
+  "id": "133650",
+  "query": "Borussia Dortmund"
+ },
+ "Germany|Borussia M'gladbach": {
+  "badge": null
+ },
+ "Germany|Duisburg MSV": {
+  "badge": "assets/badges/133877.png",
+  "team": "Duisburg",
+  "id": "133877",
+  "query": "Duisburg MSV"
+ },
+ "Germany|Dynamo Dresden": {
+  "badge": "assets/badges/135655.png",
+  "team": "Dynamo Dresden",
+  "id": "135655",
+  "query": "Dynamo Dresden"
+ },
+ "Germany|Eintracht Braunschweig": {
+  "badge": "assets/badges/134302.png",
+  "team": "Eintracht Braunschweig",
+  "id": "134302",
+  "query": "Eintracht Braunschweig"
+ },
+ "Germany|Eintracht Frankfurt": {
+  "badge": "assets/badges/133814.png",
+  "team": "Eintracht Frankfurt",
+  "id": "133814",
+  "query": "Eintracht Frankfurt"
+ },
+ "Germany|Fortuna Dusseldorf": {
+  "badge": "assets/badges/133935.png",
+  "team": "Fortuna Düsseldorf",
+  "id": "133935",
+  "query": "Fortuna Dusseldorf"
+ },
+ "Germany|Fortuna Friedersdorf SV": {
+  "badge": null
+ },
+ "Germany|Freiburg SC": {
+  "badge": "assets/badges/133653.png",
+  "team": "Freiburg",
+  "id": "133653",
+  "query": "Freiburg SC"
+ },
+ "Germany|Germania 1.FC 08 E.V. Ober-Roden": {
+  "badge": null
+ },
+ "Germany|Hamburger SV": {
+  "badge": null
+ },
+ "Germany|Hansa Rostock": {
+  "badge": "assets/badges/133876.png",
+  "team": "Hansa Rostock",
+  "id": "133876",
+  "query": "Hansa Rostock"
+ },
+ "Germany|Hertha BSC Berlin": {
+  "badge": "assets/badges/133658.png",
+  "team": "Hertha",
+  "id": "133658",
+  "query": "Hertha BSC Berlin"
+ },
+ "Germany|Kaiserslautern": {
+  "badge": "assets/badges/133663.png",
+  "team": "Kaiserslautern",
+  "id": "133663",
+  "query": "Kaiserslautern"
+ },
+ "Germany|Kaiserslautern + Werder": {
+  "badge": "assets/badges/133663.png",
+  "team": "Kaiserslautern",
+  "id": "133663",
+  "query": "kaiserslautern"
+ },
+ "Germany|Karlsruher S.C.": {
+  "badge": null
+ },
+ "Germany|Munchen 1860": {
+  "badge": "assets/badges/134242.png",
+  "team": "1860 Munich",
+  "id": "134242",
+  "query": "Munchen 1860"
+ },
+ "Germany|Nurnberg 1.FC": {
+  "badge": "assets/badges/133659.png",
+  "team": "Nürnberg",
+  "id": "133659",
+  "query": "nurnberg"
+ },
+ "Germany|Preussen Munster SC": {
+  "badge": "assets/badges/137965.png",
+  "team": "Preußen Münster",
+  "id": "137965",
+  "query": "Preussen Munster SC"
+ },
+ "Germany|Schalke 04": {
+  "badge": "assets/badges/133661.png",
+  "team": "Schalke 04",
+  "id": "133661",
+  "query": "Schalke 04"
+ },
+ "Germany|Stuttgart VFB": {
+  "badge": "assets/badges/133660.png",
+  "team": "Stuttgart",
+  "id": "133660",
+  "query": "Stuttgart VFB"
+ },
+ "Germany|VFB Leipzig": {
+  "badge": "assets/badges/138382.png",
+  "team": "Lokomotive Leipzig",
+  "id": "138382",
+  "query": "VFB Leipzig"
+ },
+ "Germany|Werder Bremen": {
+  "badge": "assets/badges/133662.png",
+  "team": "Werder Bremen",
+  "id": "133662",
+  "query": "Werder Bremen"
+ },
+ "Germany|Wolfsburg VFL": {
+  "badge": "assets/badges/133655.png",
+  "team": "Wolfsburg",
+  "id": "133655",
+  "query": "Wolfsburg VFL"
+ },
+ "Greece|National Team of Greece": {
+  "badge": "assets/badges/133902.png",
+  "team": "Greece",
+  "id": "133902",
+  "query": "Greece"
+ },
+ "Greece|A.E.K Athens": {
+  "badge": null
+ },
+ "Greece|AEL 1964": {
+  "badge": null
+ },
+ "Greece|Anagennisi Karditsa 1904": {
+  "badge": null
+ },
+ "Greece|Aris FC Thessaloniki": {
+  "badge": "assets/badges/133742.png",
+  "team": "Aris",
+  "id": "133742",
+  "query": "aris"
+ },
+ "Greece|Ethnikos Piraeus": {
+  "badge": "assets/badges/155078.png",
+  "team": "Ethnikos Piraeus",
+  "id": "155078",
+  "query": "Ethnikos Piraeus"
+ },
+ "Greece|Iraklis Thessaloniki": {
+  "badge": "assets/badges/133828.png",
+  "team": "Iraklis",
+  "id": "133828",
+  "query": "iraklis"
+ },
+ "Greece|O.F.I. Crete": {
+  "badge": null
+ },
+ "Greece|Olympiacos CFP Piraeus": {
+  "badge": null
+ },
+ "Greece|Panathinaikos FC Athens": {
+  "badge": "assets/badges/133746.png",
+  "team": "Panathinaikos",
+  "id": "133746",
+  "query": "panathinaikos"
+ },
+ "Greece|Panionios NFC Nea Smirni": {
+  "badge": null
+ },
+ "Greece|PAOK Thessaloniki": {
+  "badge": "assets/badges/133749.png",
+  "team": "PAOK",
+  "id": "133749",
+  "query": "paok"
+ },
+ "Greece|Proodeftiki FC Korydallos": {
+  "badge": "assets/badges/134249.png",
+  "team": "Proodeftiki",
+  "id": "134249",
+  "query": "proodeftiki"
+ },
+ "Hungary|National Team of Hungary": {
+  "badge": "assets/badges/135987.png",
+  "team": "Hungary",
+  "id": "135987",
+  "query": "Hungary"
+ },
+ "Hungary|Budapest Honved (Ultra' Red Boys)": {
+  "badge": "assets/badges/134070.png",
+  "team": "Budapest Honvéd",
+  "id": "134070",
+  "query": "Budapest Honved"
+ },
+ "Hungary|Diosgyori VTK Miskolc": {
+  "badge": null
+ },
+ "Hungary|Ferencvaros Budapest": {
+  "badge": "assets/badges/134620.png",
+  "team": "Ferencváros",
+  "id": "134620",
+  "query": "ferencvaros"
+ },
+ "Hungary|Gyori ETO FC": {
+  "badge": "assets/badges/134314.png",
+  "team": "Győri ETO",
+  "id": "134314",
+  "query": "gyori eto"
+ },
+ "Hungary|Ujpest Budapest": {
+  "badge": "assets/badges/138183.png",
+  "team": "Újpest",
+  "id": "138183",
+  "query": "ujpest"
+ },
+ "Hungary|ZTE Zalaegerszeg": {
+  "badge": "assets/badges/138186.png",
+  "team": "Zalaegerszeg",
+  "id": "138186",
+  "query": "ZTE Zalaegerszeg"
+ },
+ "Ireland|National Team of Republic of Ireland": {
+  "badge": null
+ },
+ "Ireland|Bohemian Dublin": {
+  "badge": null
+ },
+ "Israel|National Team of Israel": {
+  "badge": "assets/badges/135931.png",
+  "team": "Israel",
+  "id": "135931",
+  "query": "Israel"
+ },
+ "Israel|Ashdod FC": {
+  "badge": "assets/badges/135991.png",
+  "team": "Ashdod",
+  "id": "135991",
+  "query": "Ashdod FC"
+ },
+ "Israel|Beitar Jerusalem": {
+  "badge": "assets/badges/135992.png",
+  "team": "Beitar Jerusalem",
+  "id": "135992",
+  "query": "Beitar Jerusalem"
+ },
+ "Israel|Bnei Sakhnin": {
+  "badge": "assets/badges/135994.png",
+  "team": "Bnei Sakhnin",
+  "id": "135994",
+  "query": "Bnei Sakhnin"
+ },
+ "Israel|Bnei Yehuda Tel-Aviv": {
+  "badge": "assets/badges/134009.png",
+  "team": "Bnei Yehuda",
+  "id": "134009",
+  "query": "bnei yehuda tel aviv"
+ },
+ "Israel|Hapoel Ashkelon": {
+  "badge": "assets/badges/135993.png",
+  "team": "Hapoel Ashkelon",
+  "id": "135993",
+  "query": "Hapoel Ashkelon"
+ },
+ "Israel|Hapoel Beer-Sheva": {
+  "badge": null
+ },
+ "Israel|Hapoel Haifa": {
+  "badge": "assets/badges/135995.png",
+  "team": "Hapoel Haifa",
+  "id": "135995",
+  "query": "Hapoel Haifa"
+ },
+ "Israel|Hapoel Tel-Aviv": {
+  "badge": "assets/badges/134124.png",
+  "team": "Hapoel Tel-Aviv",
+  "id": "134124",
+  "query": "hapoel tel"
+ },
+ "Israel|Maccabi Haifa": {
+  "badge": "assets/badges/134400.png",
+  "team": "Maccabi Haifa",
+  "id": "134400",
+  "query": "Maccabi Haifa"
+ },
+ "Israel|Maccabi Herzliya": {
+  "badge": "assets/badges/145953.png",
+  "team": "Maccabi Herzliya",
+  "id": "145953",
+  "query": "Maccabi Herzliya"
+ },
+ "Israel|Maccabi Netanya": {
+  "badge": "assets/badges/134087.png",
+  "team": "Maccabi Netanya",
+  "id": "134087",
+  "query": "Maccabi Netanya"
+ },
+ "Israel|Maccabi Petach-Tikva": {
+  "badge": "assets/badges/135998.png",
+  "team": "Maccabi Petah Tikva",
+  "id": "135998",
+  "query": "maccabi petach tikva"
+ },
+ "Israel|Maccabi Tel-Aviv": {
+  "badge": "assets/badges/134315.png",
+  "team": "Maccabi Tel Aviv",
+  "id": "134315",
+  "query": "maccabi tel aviv"
+ },
+ "Italy|National Team of Italy": {
+  "badge": "assets/badges/133910.png",
+  "team": "Italy",
+  "id": "133910",
+  "query": "Italy"
+ },
+ "Italy|Atalanta BC Bergamo": {
+  "badge": null
+ },
+ "Italy|Fiorentina AC Florence": {
+  "badge": "assets/badges/133674.png",
+  "team": "Fiorentina",
+  "id": "133674",
+  "query": "fiorentina"
+ },
+ "Italy|Inter Milan": {
+  "badge": "assets/badges/133681.png",
+  "team": "Inter Milan",
+  "id": "133681",
+  "query": "Inter Milan"
+ },
+ "Italy|Juventus FC Turin": {
+  "badge": "assets/badges/133676.png",
+  "team": "Juventus",
+  "id": "133676",
+  "query": "juventus"
+ },
+ "Italy|Lazio SS Rome": {
+  "badge": "assets/badges/133668.png",
+  "team": "Lazio",
+  "id": "133668",
+  "query": "lazio"
+ },
+ "Italy|Milan AC": {
+  "badge": "assets/badges/133667.png",
+  "team": "AC Milan",
+  "id": "133667",
+  "query": "Milan AC"
+ },
+ "Italy|Parma FC": {
+  "badge": "assets/badges/135728.png",
+  "team": "Parma",
+  "id": "135728",
+  "query": "Parma FC"
+ },
+ "Italy|Roma AS Rome": {
+  "badge": "assets/badges/133682.png",
+  "team": "Roma",
+  "id": "133682",
+  "query": "Roma AS Rome"
+ },
+ "Italy|US Citta di Palermo": {
+  "badge": null
+ },
+ "Italy|Venezia 1907 AC": {
+  "badge": "assets/badges/134234.png",
+  "team": "Venezia",
+  "id": "134234",
+  "query": "venezia"
+ },
+ "Kazakhstan|National team of Kazakhstan": {
+  "badge": "assets/badges/136449.png",
+  "team": "Kazakhstan",
+  "id": "136449",
+  "query": "Kazakhstan"
+ },
+ "Kazakhstan|Alma-Ata Almaty": {
+  "badge": "assets/badges/148414.png",
+  "team": "Alma-Ata",
+  "id": "148414",
+  "query": "alma ata"
+ },
+ "Kazakhstan|Astana FC": {
+  "badge": "assets/badges/134342.png",
+  "team": "Astana",
+  "id": "134342",
+  "query": "Astana FC"
+ },
+ "Kazakhstan|Kayrat Almaty": {
+  "badge": null
+ },
+ "Kazakhstan|Tobol Kostanay": {
+  "badge": "assets/badges/138042.png",
+  "team": "Tobol",
+  "id": "138042",
+  "query": "tobol"
+ },
+ "Kazakhstan|Vostok Oskemen": {
+  "badge": "assets/badges/148413.png",
+  "team": "Vostok Öskemen",
+  "id": "148413",
+  "query": "Vostok Oskemen"
+ },
+ "Kazakhstan|Zhetisu Taldykorgan": {
+  "badge": null
+ },
+ "Kuwait|Al Arabi SC Kuwait Сity": {
+  "badge": null
+ },
+ "Latvia|National Team of Latvija": {
+  "badge": "assets/badges/136517.png",
+  "team": "Latvia",
+  "id": "136517",
+  "query": "Latvia"
+ },
+ "Latvia|Metalurgs Liepajas": {
+  "badge": null
+ },
+ "Latvia|Skonto FK": {
+  "badge": "assets/badges/134089.png",
+  "team": "Skonto Riga",
+  "id": "134089",
+  "query": "Skonto FK"
+ },
+ "Latvia|Ventspils FK": {
+  "badge": null
+ },
+ "Lithuania|National Team of Lithuania": {
+  "badge": "assets/badges/136459.png",
+  "team": "Lithuania",
+  "id": "136459",
+  "query": "Lithuania"
+ },
+ "Lithuania|National Team of Lithuania 2": {
+  "badge": "assets/badges/136459.png",
+  "team": "Lithuania",
+  "id": "136459",
+  "query": "Lithuania"
+ },
+ "Lithuania|Kaunas FBK": {
+  "badge": "assets/badges/146011.png",
+  "team": "FBK Kaunas",
+  "id": "146011",
+  "query": "Kaunas FBK"
+ },
+ "Lithuania|Vilnius FC": {
+  "badge": "assets/badges/152766.png",
+  "team": "Vilnius FA",
+  "id": "152766",
+  "query": "Vilnius FC"
+ },
+ "Lithuania|Žalgiris Vilnius": {
+  "badge": "assets/badges/134095.png",
+  "team": "Žalgiris Vilnius",
+  "id": "134095",
+  "query": "Žalgiris Vilnius"
+ },
+ "Luxembourg|National Team of Luxembourg": {
+  "badge": "assets/badges/136458.png",
+  "team": "Luxembourg",
+  "id": "136458",
+  "query": "Luxembourg"
+ },
+ "Malta|Birkirkara FC": {
+  "badge": "assets/badges/134035.png",
+  "team": "Birkirkara",
+  "id": "134035",
+  "query": "Birkirkara FC"
+ },
+ "Moldova|National Team of Moldova": {
+  "badge": "assets/badges/136460.png",
+  "team": "Moldova",
+  "id": "136460",
+  "query": "Moldova"
+ },
+ "Moldova|Dacia Chisinau": {
+  "badge": "assets/badges/134057.png",
+  "team": "FC Dacia",
+  "id": "134057",
+  "query": "Dacia Chisinau"
+ },
+ "Moldova|Olimpia Balti": {
+  "badge": "assets/badges/141803.png",
+  "team": "Bălți",
+  "id": "141803",
+  "query": "Olimpia Balti"
+ },
+ "Moldova|Saxan Ciadîr-Lunga": {
+  "badge": null
+ },
+ "Moldova|Sheriff Tiraspol": {
+  "badge": "assets/badges/133962.png",
+  "team": "Sheriff Tiraspol",
+  "id": "133962",
+  "query": "Sheriff Tiraspol"
+ },
+ "Moldova|Tiraspol FC": {
+  "badge": "assets/badges/134329.png",
+  "team": "FC Tiraspol",
+  "id": "134329",
+  "query": "Tiraspol FC"
+ },
+ "Moldova|Zimbru C.S.F. Chisinau": {
+  "badge": "assets/badges/134051.png",
+  "team": "Zimbru Chișinău",
+  "id": "134051",
+  "query": "zimbru c s f chisinau"
+ },
+ "Montenegro|National Team of Montenegro": {
+  "badge": "assets/badges/136462.png",
+  "team": "Montenegro",
+  "id": "136462",
+  "query": "Montenegro"
+ },
+ "Montenegro|Buducnost Podgorica (Ultras \"Varvari\")": {
+  "badge": "assets/badges/133983.png",
+  "team": "Budućnost Podgorica",
+  "id": "133983",
+  "query": "Buducnost Podgorica"
+ },
+ "Morocco|National Team of Morocco": {
+  "badge": "assets/badges/136139.png",
+  "team": "Morocco",
+  "id": "136139",
+  "query": "Morocco"
+ },
+ "Netherlands|National Team of Holland": {
+  "badge": "assets/badges/133905.png",
+  "team": "Netherlands",
+  "id": "133905",
+  "query": "Netherlands"
+ },
+ "Netherlands|National Team of Holland (Ultras)": {
+  "badge": "assets/badges/133905.png",
+  "team": "Netherlands",
+  "id": "133905",
+  "query": "Netherlands"
+ },
+ "Netherlands|Ado Den Haag": {
+  "badge": "assets/badges/133769.png",
+  "team": "ADO Den Haag",
+  "id": "133769",
+  "query": "Ado Den Haag"
+ },
+ "Netherlands|Ajax Amsterdam": {
+  "badge": "assets/badges/133772.png",
+  "team": "Ajax",
+  "id": "133772",
+  "query": "Ajax Amsterdam"
+ },
+ "Netherlands|ACV Assen": {
+  "badge": null
+ },
+ "Netherlands|AZ Alkmaar": {
+  "badge": "assets/badges/133767.png",
+  "team": "AZ Alkmaar",
+  "id": "133767",
+  "query": "AZ Alkmaar"
+ },
+ "Netherlands|De Graafschap Doetinchem": {
+  "badge": "assets/badges/133771.png",
+  "team": "De Graafschap",
+  "id": "133771",
+  "query": "graafschap"
+ },
+ "Netherlands|Dordrecht FC": {
+  "badge": "assets/badges/134550.png",
+  "team": "Dordrecht",
+  "id": "134550",
+  "query": "Dordrecht FC"
+ },
+ "Netherlands|Excelsior Rotterdam": {
+  "badge": "assets/badges/133757.png",
+  "team": "Excelsior",
+  "id": "133757",
+  "query": "excelsior"
+ },
+ "Netherlands|Feyenoord Rotterdam": {
+  "badge": "assets/badges/133758.png",
+  "team": "Feyenoord",
+  "id": "133758",
+  "query": "Feyenoord Rotterdam"
+ },
+ "Netherlands|Feyenoord Rotterdam (Rotterdam Boys)": {
+  "badge": "assets/badges/133758.png",
+  "team": "Feyenoord",
+  "id": "133758",
+  "query": "Feyenoord Rotterdam"
+ },
+ "Netherlands|Fortuna Sittard": {
+  "badge": "assets/badges/134264.png",
+  "team": "Fortuna Sittard",
+  "id": "134264",
+  "query": "Fortuna Sittard"
+ },
+ "Netherlands|Fortuna Sittard (De Baandert)": {
+  "badge": "assets/badges/134264.png",
+  "team": "Fortuna Sittard",
+  "id": "134264",
+  "query": "Fortuna Sittard"
+ },
+ "Netherlands|Go Ahead Eagles Doventer": {
+  "badge": "assets/badges/134304.png",
+  "team": "Go Ahead Eagles",
+  "id": "134304",
+  "query": "go ahead eagles"
+ },
+ "Netherlands|Groningen FC": {
+  "badge": "assets/badges/133762.png",
+  "team": "Groningen",
+  "id": "133762",
+  "query": "groningen"
+ },
+ "Netherlands|Haarlem HFC": {
+  "badge": null
+ },
+ "Netherlands|Heracles Almelo": {
+  "badge": "assets/badges/133766.png",
+  "team": "Heracles Almelo",
+  "id": "133766",
+  "query": "Heracles Almelo"
+ },
+ "Netherlands|Herenveen SC": {
+  "badge": null
+ },
+ "Netherlands|Kozakken Boys Werkendam": {
+  "badge": "assets/badges/140529.png",
+  "team": "Kozakken Boys",
+  "id": "140529",
+  "query": "kozakken boys"
+ },
+ "Netherlands|NAC Breda": {
+  "badge": "assets/badges/133773.png",
+  "team": "NAC Breda",
+  "id": "133773",
+  "query": "NAC Breda"
+ },
+ "Netherlands|NEC Nijmegen": {
+  "badge": "assets/badges/133760.png",
+  "team": "NEC Nijmegen",
+  "id": "133760",
+  "query": "NEC Nijmegen"
+ },
+ "Netherlands|Omniworld Almere": {
+  "badge": "assets/badges/137996.png",
+  "team": "Almere City",
+  "id": "137996",
+  "query": "Omniworld Almere"
+ },
+ "Netherlands|PSV Eindhoven": {
+  "badge": "assets/badges/133768.png",
+  "team": "PSV Eindhoven",
+  "id": "133768",
+  "query": "PSV Eindhoven"
+ },
+ "Netherlands|RBC Roosendaal": {
+  "badge": "assets/badges/134226.png",
+  "team": "RBC",
+  "id": "134226",
+  "query": "RBC Roosendaal"
+ },
+ "Netherlands|RKC Waalwijk": {
+  "badge": "assets/badges/133765.png",
+  "team": "RKC Waalwijk",
+  "id": "133765",
+  "query": "RKC Waalwijk"
+ },
+ "Netherlands|Roda JC Kerkrade": {
+  "badge": "assets/badges/133761.png",
+  "team": "Roda JC",
+  "id": "133761",
+  "query": "roda jc"
+ },
+ "Netherlands|Roda JC Kerkrade (De trots)": {
+  "badge": "assets/badges/133761.png",
+  "team": "Roda JC",
+  "id": "133761",
+  "query": "roda jc"
+ },
+ "Netherlands|Sparta Rotterdam": {
+  "badge": "assets/badges/133866.png",
+  "team": "Sparta Rotterdam",
+  "id": "133866",
+  "query": "Sparta Rotterdam"
+ },
+ "Netherlands|Telstar Velsen-Zuid": {
+  "badge": null
+ },
+ "Netherlands|Twente Enschede": {
+  "badge": "assets/badges/133774.png",
+  "team": "Twente",
+  "id": "133774",
+  "query": "twente"
+ },
+ "Netherlands|Utrecht FC": {
+  "badge": "assets/badges/133764.png",
+  "team": "Utrecht",
+  "id": "133764",
+  "query": "Utrecht FC"
+ },
+ "Netherlands|Vitesse Arnhem": {
+  "badge": "assets/badges/133770.png",
+  "team": "Vitesse",
+  "id": "133770",
+  "query": "Vitesse Arnhem"
+ },
+ "Netherlands|Volendam FC": {
+  "badge": "assets/badges/133867.png",
+  "team": "Volendam",
+  "id": "133867",
+  "query": "Volendam FC"
+ },
+ "Netherlands|VVOG Harderwijk": {
+  "badge": "assets/badges/142724.png",
+  "team": "VVOG",
+  "id": "142724",
+  "query": "vvog"
+ },
+ "Netherlands|VVV Venlo": {
+  "badge": "assets/badges/136030.png",
+  "team": "VVV-Venlo",
+  "id": "136030",
+  "query": "VVV Venlo"
+ },
+ "Netherlands|Willem II Tilburg": {
+  "badge": null
+ },
+ "North Macedonia|National Team of Macedonia": {
+  "badge": "assets/badges/136457.png",
+  "team": "North Macedonia",
+  "id": "136457",
+  "query": "North Macedonia"
+ },
+ "North Macedonia|Vardar Scopje (Ultras Union)": {
+  "badge": "assets/badges/133979.png",
+  "team": "Vardar",
+  "id": "133979",
+  "query": "vardar"
+ },
+ "Northern Ireland|Glenavon Lurgan": {
+  "badge": "assets/badges/138008.png",
+  "team": "Glenavon",
+  "id": "138008",
+  "query": "glenavon"
+ },
+ "Norway|National Team of Norway": {
+  "badge": "assets/badges/136516.png",
+  "team": "Norway",
+  "id": "136516",
+  "query": "Norway"
+ },
+ "Norway|Rosenborg BK Trondheim": {
+  "badge": "assets/badges/133990.png",
+  "team": "Rosenborg",
+  "id": "133990",
+  "query": "rosenborg"
+ },
+ "Norway|Sogndal FK": {
+  "badge": "assets/badges/134563.png",
+  "team": "Sogndal",
+  "id": "134563",
+  "query": "Sogndal FK"
+ },
+ "Norway|Stabaek IF Bekkestua": {
+  "badge": null
+ },
+ "Norway|Vålerenga Oslo": {
+  "badge": "assets/badges/134574.png",
+  "team": "Vålerenga",
+  "id": "134574",
+  "query": "valerenga"
+ },
+ "Poland|National Team of Poland": {
+  "badge": "assets/badges/133901.png",
+  "team": "Poland",
+  "id": "133901",
+  "query": "Poland"
+ },
+ "Poland|Arka Gdyania": {
+  "badge": null
+ },
+ "Poland|Jagiellonia Bialystok": {
+  "badge": null
+ },
+ "Poland|Lechia KS Gdansk": {
+  "badge": "assets/badges/135299.png",
+  "team": "Lechia Gdańsk",
+  "id": "135299",
+  "query": "Lechia KS Gdansk"
+ },
+ "Poland|Legia Warszawa": {
+  "badge": null
+ },
+ "Poland|LKS Lodz": {
+  "badge": null
+ },
+ "Poland|Pogon Szczecin MKS": {
+  "badge": "assets/badges/135302.png",
+  "team": "Pogoń Szczecin",
+  "id": "135302",
+  "query": "pogon szczecin"
+ },
+ "Poland|Polonia KSP Warszawa (Ultras)": {
+  "badge": null
+ },
+ "Poland|Ruch KS Chorzow (Ultras)": {
+  "badge": "assets/badges/134016.png",
+  "team": "Ruch Chorzów",
+  "id": "134016",
+  "query": "Ruch KS Chorzow"
+ },
+ "Poland|Slask Wroclaw": {
+  "badge": null
+ },
+ "Poland|Wisla Krakow": {
+  "badge": null
+ },
+ "Portugal|National Team of Portugal": {
+  "badge": "assets/badges/133908.png",
+  "team": "Portugal",
+  "id": "133908",
+  "query": "Portugal"
+ },
+ "Portugal|A. Naval 1 de Maio Figueira da Foz": {
+  "badge": null
+ },
+ "Portugal|Academica de Coimbra": {
+  "badge": "assets/badges/134118.png",
+  "team": "Académica de Coimbra",
+  "id": "134118",
+  "query": "Academica de Coimbra"
+ },
+ "Portugal|Academico de Viseu": {
+  "badge": "assets/badges/138856.png",
+  "team": "Académico de Viseu",
+  "id": "138856",
+  "query": "Academico de Viseu"
+ },
+ "Portugal|Aguias Negras Tabuadelo": {
+  "badge": null
+ },
+ "Portugal|AJ Nespereira": {
+  "badge": null
+ },
+ "Portugal|Alfenense AC": {
+  "badge": null
+ },
+ "Portugal|Alfornelos UD": {
+  "badge": null
+ },
+ "Portugal|Almancilense SR": {
+  "badge": null
+ },
+ "Portugal|Aves CD": {
+  "badge": "assets/badges/147479.png",
+  "team": "AVS",
+  "id": "147479",
+  "query": "Aves CD"
+ },
+ "Portugal|Baiao AD": {
+  "badge": null
+ },
+ "Portugal|Belenenses OS CF": {
+  "badge": "assets/badges/134386.png",
+  "team": "Belenenses",
+  "id": "134386",
+  "query": "Belenenses OS CF"
+ },
+ "Portugal|Benfica Sport Lisboa": {
+  "badge": "assets/badges/134108.png",
+  "team": "Benfica",
+  "id": "134108",
+  "query": "Benfica Sport Lisboa"
+ },
+ "Portugal|Biera-Mar SC Aveiro": {
+  "badge": null
+ },
+ "Portugal|Boavista FC": {
+  "badge": "assets/badges/134588.png",
+  "team": "Boavista",
+  "id": "134588",
+  "query": "Boavista FC"
+ },
+ "Portugal|Braga SC": {
+  "badge": "assets/badges/134098.png",
+  "team": "Braga",
+  "id": "134098",
+  "query": "Braga SC"
+ },
+ "Portugal|Braganca GD": {
+  "badge": "assets/badges/149982.png",
+  "team": "Bragança",
+  "id": "149982",
+  "query": "Braganca GD"
+ },
+ "Portugal|Сarvalhais FC": {
+  "badge": null
+ },
+ "Portugal|Casa do Povo Lajeosa do Dao": {
+  "badge": null
+ },
+ "Portugal|Chaves GD": {
+  "badge": "assets/badges/135674.png",
+  "team": "Chaves",
+  "id": "135674",
+  "query": "Chaves GD"
+ },
+ "Portugal|Сinfaes CD": {
+  "badge": "assets/badges/149993.png",
+  "team": "Cinfães",
+  "id": "149993",
+  "query": "cinfaes"
+ },
+ "Portugal|Cova da Piedade CD": {
+  "badge": "assets/badges/138863.png",
+  "team": "CD Cova da Piedade",
+  "id": "138863",
+  "query": "Cova da Piedade CD"
+ },
+ "Portugal|Dragoes Sandinenses SC": {
+  "badge": null
+ },
+ "Portugal|Emilianos FC": {
+  "badge": null
+ },
+ "Portugal|Escolar Bombarralense SC": {
+  "badge": "assets/badges/156593.png",
+  "team": "Bombarralense",
+  "id": "156593",
+  "query": "Escolar Bombarralense SC"
+ },
+ "Portugal|Esposende AD": {
+  "badge": null
+ },
+ "Portugal|Estoril Praia GD": {
+  "badge": "assets/badges/134106.png",
+  "team": "Estoril Praia",
+  "id": "134106",
+  "query": "Estoril Praia GD"
+ },
+ "Portugal|Estrela da Amadora CF": {
+  "badge": "assets/badges/140008.png",
+  "team": "Estrela Amadora",
+  "id": "140008",
+  "query": "Estrela da Amadora CF"
+ },
+ "Portugal|Estrela FC Ouriquense": {
+  "badge": null
+ },
+ "Portugal|Famalicao FC": {
+  "badge": "assets/badges/136854.png",
+  "team": "Famalicao",
+  "id": "136854",
+  "query": "Famalicao FC"
+ },
+ "Portugal|Farense SC Faro": {
+  "badge": "assets/badges/138853.png",
+  "team": "Farense",
+  "id": "138853",
+  "query": "farense"
+ },
+ "Portugal|Fatima CD": {
+  "badge": "assets/badges/144669.png",
+  "team": "Fátima",
+  "id": "144669",
+  "query": "Fatima CD"
+ },
+ "Portugal|Febres SC": {
+  "badge": null
+ },
+ "Portugal|Feirense CD": {
+  "badge": "assets/badges/135675.png",
+  "team": "Feirense",
+  "id": "135675",
+  "query": "Feirense CD"
+ },
+ "Portugal|Gil Vicente FC": {
+  "badge": "assets/badges/134113.png",
+  "team": "Gil Vicente",
+  "id": "134113",
+  "query": "Gil Vicente FC"
+ },
+ "Portugal|Ginasio Clube de Alcobaсa": {
+  "badge": null
+ },
+ "Portugal|Imortal DC Albufeire": {
+  "badge": null
+ },
+ "Portugal|Juventude de Pedras Salgadas": {
+  "badge": "assets/badges/150992.png",
+  "team": "Juventude de Pedras Salgadas",
+  "id": "150992",
+  "query": "Juventude de Pedras Salgadas"
+ },
+ "Portugal|Lagoa Grupo Desportivo": {
+  "badge": null
+ },
+ "Portugal|Leiria UD": {
+  "badge": "assets/badges/140355.png",
+  "team": "União de Leiria",
+  "id": "140355",
+  "query": "Leiria UD"
+ },
+ "Portugal|Leixoes SC Matosinhos": {
+  "badge": "assets/badges/138858.png",
+  "team": "Leixões",
+  "id": "138858",
+  "query": "leixoes"
+ },
+ "Portugal|Leoes das Enguardas SC": {
+  "badge": null
+ },
+ "Portugal|Lorvanense UD": {
+  "badge": null
+ },
+ "Portugal|loures GS": {
+  "badge": null
+ },
+ "Portugal|Lousado CD": {
+  "badge": null
+ }
+}
