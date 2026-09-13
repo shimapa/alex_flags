@@ -122,6 +122,57 @@
   }
   addEventListener("hashchange", () => { route(); main.focus({ preventScroll: true }); scrollTo(0, 0); });
 
+
+  /* ------------------------------------------------------------ home hero */
+  const CONTINENT_COLOR = { Europe: "var(--c-blue)", Asia: "var(--c-red)", "South America": "var(--c-yellow)", Africa: "var(--c-teal)", "North America": "var(--c-pink)", Special: "var(--ink)" };
+  const wallPicks = (() => {
+    const pool = scarves.filter((s) => s.badge || s.official);
+    const rnd = d3.randomLcg(7);
+    return d3.shuffler(rnd)(pool.slice()).slice(0, 44);
+  })();
+  function heroHtml() {
+    const official = scarves.filter((s) => s.official).length;
+    const national = scarves.filter((s) => s.national).length;
+    const row = (list) => {
+      const items = list.map((s) => `<a class="wall-item" href="#/scarf/${s.n}" title="${esc(s.club)}" tabindex="-1"><img src="${esc(s.photo)}" alt="" loading="lazy" decoding="async"></a>`).join("");
+      return `<div class="wall-track">${items}${items}</div>`;
+    };
+    return `
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-stripes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <h1 class="hero-title" id="hero-title">
+          <span class="line"><span><b class="num" data-count="${total}">${fmt(total)}</b> football</span></span>
+          <span class="line"><span><em>scarves</em> from</span></span>
+          <span class="line"><span><b class="num num-blue" data-count="${realCountries.length}">${realCountries.length}</b> countries</span></span>
+        </h1>
+        <div class="hero-side">
+          <p class="hero-lede">Alex's collection, gathered in Moscow since ${meta.since}. Almost every scarf was brought from the city or the country its team plays in: swapped, posted or carried home.</p>
+          <div class="hero-stats">
+            <a class="stat stat-yellow" href="#/items?only=official"><b data-count="${official}">${official}</b><span>official club scarves</span></a>
+            <a class="stat stat-blue" href="#/items?only=national"><b data-count="${national}">${national}</b><span>national teams</span></a>
+            ${newCount ? `<a class="stat stat-red" href="#/items?only=new"><b data-count="${newCount}">${newCount}</b><span>new on ${esc((meta.updatedOn || "").replace(/ \d{4}$/, ""))}</span></a>` : ""}
+          </div>
+        </div>
+      </section>
+      <div class="wall" aria-hidden="true">
+        ${row(wallPicks.slice(0, 22))}
+        ${row(wallPicks.slice(22))}
+      </div>`;
+  }
+  function animateHero() {
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) return;
+    $$("[data-count]", main).forEach((el) => {
+      const to = +el.dataset.count, t0 = performance.now(), dur = 1400;
+      const tick = (t) => {
+        const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(2, -10 * k);
+        el.textContent = fmt(Math.round(to * (k === 1 ? 1 : e)));
+        if (k < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }
+
   /* ------------------------------------------------------------ items */
   function renderItems(params) {
     const state = {
@@ -148,7 +199,7 @@
           ${inCountry ? `<a href="#/items">Football scarves</a><span>/</span><strong>${esc(state.country)}</strong>` : `<strong>Football scarves</strong>`}
         </nav>
 
-        <header class="coll-head">
+        ${inCountry ? `        <header class="coll-head">
           <div class="coll-icon" aria-hidden="true">${inCountry ? flag(state.country) : `<span class="logo logo-lg"><svg><use href="#i-scarf"/></svg></span>`}</div>
           <div class="coll-text">
             <div class="coll-title-row">
@@ -166,13 +217,13 @@
               <div><p class="kpi-label">${inCountry ? "First noted" : "Last update"}</p><p class="kpi-value">${inCountry ? (firstYear || "—") : esc(meta.updatedOn || "—")}</p></div>
             </div>
           </div>
-        </header>
+        </header>` : heroHtml()}
 
         <div class="toolbar">
           <div class="toolbar-row">
             <div class="pills" role="group" aria-label="Continent">
               ${inCountry ? `<a class="pill" href="#/items">All countries</a><span class="pill is-on">${esc(state.country)}</span>` :
-                ["", ...CONTINENTS].map((c) => `<button type="button" class="pill${state.continent === c ? " is-on" : ""}" data-continent="${c}" aria-pressed="${state.continent === c}">${c || "All"}</button>`).join("")}
+                ["", ...CONTINENTS].map((c) => `<button type="button" class="pill${state.continent === c ? " is-on" : ""}" data-continent="${c}" aria-pressed="${state.continent === c}">${c ? `<span class="pill-dot" style="--c:${CONTINENT_COLOR[c]}"></span>` : ""}${c || "All"}</button>`).join("")}
             </div>
             <div class="toolbar-right">
               <label class="search"><span class="sr">Search scarves</span>${icon("i-search")}<input type="search" id="q" placeholder="Search scarves…" value="${esc(state.q)}" autocomplete="off"></label>
@@ -212,6 +263,7 @@
         ${credits}
       </div>`;
 
+    if (!inCountry) animateHero();
     const PAGE = 96;
     let list = [], shown = 0;
 
@@ -233,8 +285,8 @@
     const badgesFor = (s) =>
       `${s.new ? '<span class="badge badge-sm badge-new">New</span>' : ""}<span class="badge badge-sm">${icon(HOW[s.how].icon)}${esc(HOW[s.how].short)}</span>${s.official ? '<span class="badge badge-sm badge-official">Official</span>' : ""}${s.national ? '<span class="badge badge-sm badge-nt">National team</span>' : ""}`;
     const logoImg = (s, cls) => (logoOf(s) ? `<img class="${cls}" src="${esc(logoOf(s))}" alt="" loading="lazy" decoding="async">` : "");
-    const cardHtml = (s) => `
-      <a class="card" href="#/scarf/${s.n}">
+    const cardHtml = (s, i = 0) => `
+      <a class="card" href="#/scarf/${s.n}" style="--i:${i % 24}">
         <div class="card-photo"><img src="${esc(s.photo)}" alt="${esc(s.club)}" loading="lazy" decoding="async"></div>
         <div class="card-body">
           <span class="card-name-row">${logoImg(s, "card-logo")}<span class="card-name"${lang(s.club)} title="${esc(s.club)}">${esc(s.club)}</span></span>
@@ -349,7 +401,6 @@
 
         <div class="item-head">
           <div class="item-id">
-            ${logoOf(s) ? `<span class="item-logo"><img src="${esc(logoOf(s))}" alt="${esc(s.club)} badge"></span>` : ""}
             <div>
               <h1 class="title"${lang(s.club)}>${esc(s.club)}</h1>
               ${s.clubEn && s.clubEn !== s.club ? `<p class="item-alt">${esc(s.clubEn)}</p>` : ""}
@@ -371,6 +422,11 @@
         <div class="item">
           <div>
             <div class="photo" id="photo">
+              <a class="club-tag" href="#/items?q=${encodeURIComponent(s.clubEn || s.club)}" title="All scarves of ${esc(s.club)}">
+                <span class="club-tag-string" aria-hidden="true"></span>
+                <span class="club-tag-badge">${logoOf(s) ? `<img src="${esc(logoOf(s))}" alt="">` : flag(s.country)}</span>
+                <span class="club-tag-text"><b${lang(s.club)}>${esc(s.club)}</b><small>${esc(s.country)}${s.national ? " · national team" : ""}</small></span>
+              </a>
               <img src="${esc(s.photo)}" alt="Scarf of ${esc(s.club)}">
               <div class="photo-glare"></div>
             </div>
