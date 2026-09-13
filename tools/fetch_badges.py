@@ -86,7 +86,7 @@ def country_ok(team, country):
     return have in COUNTRY_ALIASES.get(country, {fold(country)})
 
 
-RESERVE = re.compile(r"(\s(B|C|II|III)$)|\bU-?\d{2}\b|\b(Reserves?|Youth|Women|Ladies|Academy|Primavera|Futsal|Beach)\b", re.I)
+RESERVE = re.compile(r"(\s(B|C|II|III)$)|\bU-?\d{2}\b|\b(Reserves?|Youth|Women|Ladies|Academy|Primavera|Futsal|Beach|Handball|Basketball|NXT|Fabril|SL16|Jong)\b", re.I)
 
 
 def is_first_team(team):
