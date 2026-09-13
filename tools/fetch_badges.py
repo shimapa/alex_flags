@@ -98,54 +98,84 @@ def names_of(team):
     return [team["strTeam"]] + alts
 
 
+TRANSLIT = dict(zip("абвгдезийклмнопрстуфыэ", "abvgdeziyklmnoprstufye"))
+TRANSLIT.update({"ж": "zh", "х": "kh", "ц": "ts", "ч": "ch", "ш": "sh", "щ": "shch", "ю": "yu", "я": "ya", "ъ": "", "ь": "",
+                 "і": "i", "ї": "yi", "є": "ye", "ґ": "g", "ў": "u"})
+# local and English spellings of the same place or word, folded to one form
+CANON = {"wien": "vienna", "praha": "prague", "moskva": "moscow", "tirane": "tirana", "baki": "baku", "kiev": "kyiv",
+         "bucuresti": "bucharest", "beograd": "belgrade", "lisboa": "lisbon", "warszawa": "warsaw", "munchen": "munich",
+         "koln": "cologne", "dinamo": "dynamo", "dnipropetrovsk": "dnipro", "kharkov": "kharkiv", "lvov": "lviv",
+         "odessa": "odesa", "kishinev": "chisinau", "peterburg": "petersburg", "sankt": "saint", "zhemchuzhina": "zhemchuzhina",
+         "shakhter": "shakhtyor", "shakhtar": "shakhtyor", "lokomotiv": "lokomotiv", "lokomotive": "lokomotiv",
+         "torpedo": "torpedo", "yerevan": "yerevan", "erevan": "yerevan", "tbilisi": "tbilisi", "gdansk": "gdansk",
+         "independente": "independiente", "angi": "anzhi", "anji": "anzhi", "mahachkala": "makhachkala"}
+
+
+def latin(s):
+    return "".join(TRANSLIT.get(c, c) for c in fold(s))
+
+
+def ctokens(s):
+    """Distinctive tokens, transliterated and folded to canonical spellings."""
+    return [CANON.get(t, t) for t in tokens(latin(s))]
+
+
+def same(a, b):
+    if a == b:
+        return True
+    if min(len(a), len(b)) < 5:
+        return False
+    import difflib
+    return difflib.SequenceMatcher(None, a, b).ratio() >= 0.8
+
+
+def covered(mine, theirs):
+    return all(any(same(m, t) for t in theirs) for m in mine)
+
+
 def match(club, slug, country, national):
     """Return (team, query) or (None, None)."""
     if national:
         q = NATIONAL_QUERY.get(country, country)
-        for t in search(q):
-            if fold(t["strTeam"]) == fold(q) and is_first_team(t):
-                return t, q
+        want = set(ctokens(q.replace("&", " and ")))
+        for query in dict.fromkeys([q, q.replace("&", "and"), q.split()[0]]):
+            for t in search(query):
+                if is_first_team(t) and set(ctokens(t["strTeam"].replace("&", " and ").replace("-", " "))) == want:
+                    return t, query
         return None, None
 
-    ours = set(tokens(club))
-    ours_slug = set(tokens(slug))
-    cyr = bool(re.search(r"[а-яё]", club.lower()))
-    core_toks = tokens(club) if not cyr else tokens(slug)
-    queries = []
-    if not cyr:
-        queries.append(re.sub(r"\(.*?\)", "", club).strip())
-    # progressively shorter prefixes of the distinctive words: "boca juniors buenos aires" -> "boca juniors"
-    for k in range(len(core_toks), 0, -1):
-        q = " ".join(core_toks[:k])
-        if k == 1 and len(q) < 4:
-            continue
-        queries.append(q)
-    queries = queries[:4]
+    ours = ctokens(club)
+    if not ours:
+        ours = ctokens(slug)
+    if not ours:
+        return None, None
+    plain = re.sub(r"\(.*?\)", "", club).strip()
+    raw = tokens(latin(club)) or tokens(slug)  # as spelled, before canonical folding ("dinamo", not "dynamo")
+    queries = list(dict.fromkeys(q for q in [
+        " ".join(raw[:2]),
+        " ".join(ours[:2]),
+        raw[0] if len(raw[0]) >= 4 else "",
+        plain if not re.search(r"[а-яё]", plain.lower()) else "",
+        " ".join(tokens(slug)[:2]),
+    ] if q))[:5]
 
-    seen = set()
     for q in queries:
-        if not q or q in seen:
-            continue
-        seen.add(q)
         best = None
         for t in search(q):
             if not country_ok(t, country) or not is_first_team(t):
                 continue
             cand = set()
             for name in names_of(t):
-                cand |= set(tokens(name))
-            target = ours if ours else ours_slug
-            if not target:
+                cand |= set(ctokens(name))
+            core = ctokens(t["strTeam"])
+            if covered(ours, cand):
+                score = len(cand)  # prefer the team with the fewest extra words
+            elif core and covered(core, ours) and (len(core) >= 2 or len(ours) <= 2):
+                score = 100 + len(ours) - len(core)  # their name is ours minus a city or suffix
+            else:
                 continue
-            if target <= cand or (cyr and ours_slug and ours_slug <= cand):
-                team_core = set(tokens(t["strTeam"]))
-                extra = len(cand - target)
-                if best is None or extra < best[1]:
-                    best = (t, extra)
-            elif set(tokens(t["strTeam"])) and set(tokens(t["strTeam"])) <= target and (len(set(tokens(t["strTeam"]))) >= 2 or len(target) <= 2):
-                # their name is ours minus a city or suffix, e.g. "Boca Juniors" for "Boca Juniors Buenos Aires"
-                if best is None:
-                    best = (t, 99)
+            if best is None or score < best[1]:
+                best = (t, score)
         if best:
             return best[0], q
     return None, None

@@ -2,3 +2,4 @@
 tools/.sportsdb-cache.json
 tools/*.log
 __pycache__/
+tools/.retry-keys.json
