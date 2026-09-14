@@ -1,0 +1,85 @@
+/* Admin page: adding scarves. Builds on the tokens and components in app.css. */
+.admin { max-width: 1080px; margin: 0 auto; padding: 28px 24px 72px; }
+.admin-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin: 14px 0 22px; }
+.who { display: flex; align-items: baseline; gap: 12px; font-size: 14px; color: var(--muted); }
+.who b { color: var(--ink); }
+.link-btn { border: 0; padding: 0; background: none; color: var(--c-red); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+
+.admin-box { padding: 20px 22px 22px; }
+.admin-box .box-title { margin: 0 0 12px; }
+.stack { display: grid; gap: 14px; align-content: start; }
+.stack > .box-title { margin-bottom: 0; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+#login { max-width: 560px; }
+
+.hint { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+.error { margin: 0; padding: 10px 12px; border-radius: 2px; font-size: 14px; color: #8f1d0e; background: color-mix(in srgb, var(--c-red) 12%, var(--canvas)); box-shadow: inset 3px 0 0 var(--c-red); }
+.ok { margin: 0; padding: 10px 12px; border-radius: 2px; font-size: 14px; color: var(--ink); background: color-mix(in srgb, var(--c-teal) 14%, var(--canvas)); box-shadow: inset 3px 0 0 var(--c-teal); }
+.ok a { color: var(--c-red); text-decoration: underline; text-underline-offset: 3px; }
+
+.howto { margin: 12px 0 16px; font-size: 14px; color: var(--body); }
+.howto summary { cursor: pointer; font-weight: 700; color: var(--ink); }
+.howto ol { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 8px; line-height: 1.5; }
+.howto a { color: var(--c-red); text-decoration: underline; text-underline-offset: 3px; }
+
+.field { display: grid; gap: 6px; min-width: 0; }
+.field > span { font-family: var(--display); font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.field > span small { font-family: var(--font); letter-spacing: 0; text-transform: none; font-size: 12px; }
+.field input, .field textarea {
+  width: 100%; min-height: 40px; padding: 9px 12px; border: 1px solid var(--hairline); border-radius: 2px;
+  background: var(--input); color: var(--ink); font: inherit; font-size: 15px;
+}
+.field textarea { resize: vertical; line-height: 1.5; font-family: var(--letter); }
+.field input:focus, .field textarea:focus, .field .select:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 2px color-mix(in srgb, var(--c-red) 30%, transparent); }
+.field .select { width: 100%; }
+.field input[aria-invalid="true"], .field select[aria-invalid="true"] { border-color: var(--c-red); }
+.check { display: flex; align-items: center; gap: 9px; font-size: 14.5px; color: var(--ink); cursor: pointer; }
+.check input { width: 17px; height: 17px; accent-color: var(--c-red); }
+
+.admin-grid { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; margin-bottom: 28px; }
+.admin-grid > .box:first-child { grid-column: 1 / -1; }
+.admin-actions { grid-column: 1 / -1; display: grid; gap: 12px; justify-items: start; }
+.btn-big { height: 48px; padding: 0 26px; font-family: var(--display); font-size: 16px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+
+.drop {
+  position: relative; display: grid; place-items: center; min-height: 190px; padding: 18px;
+  border: 1.5px dashed var(--hairline); border-radius: 3px; background: var(--card); text-align: center; cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.drop:hover, .drop.is-over { border-color: var(--c-red); background: color-mix(in srgb, var(--c-red) 6%, var(--card)); }
+.drop input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.drop img { max-width: 100%; max-height: 260px; object-fit: contain; filter: drop-shadow(0 6px 10px rgba(27, 24, 20, .22)); }
+.drop-text { font-size: 15px; color: var(--body); line-height: 1.5; }
+.drop-text small { color: var(--muted); font-size: 13px; }
+.drop.has-photo .drop-text { display: none; }
+.drop:focus-within { border-color: var(--ink); }
+
+.badge-pick { display: grid; gap: 8px; }
+.badge-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.badge-opt {
+  display: flex; align-items: center; gap: 9px; min-width: 0; padding: 7px 9px; text-align: left;
+  border: 1px solid var(--hairline); border-radius: 2px; background: var(--input); color: var(--ink); font: inherit; cursor: pointer;
+}
+.badge-opt img { width: 30px; height: 30px; flex: none; object-fit: contain; }
+.badge-opt .none-mark { display: grid; place-items: center; width: 30px; height: 30px; flex: none; border: 1px dashed var(--hairline); color: var(--muted); font-size: 16px; }
+.badge-opt span { display: grid; min-width: 0; font-size: 13px; line-height: 1.3; }
+.badge-opt b, .badge-opt small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.badge-opt small { color: var(--muted); font-size: 11.5px; }
+.badge-opt[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink), 3px 3px 0 -1px var(--c-red); }
+
+.new-country { padding: 12px 14px; border-left: 3px solid var(--c-yellow); background: var(--card); }
+
+.recent-list { list-style: none; margin: 0; padding: 0; display: grid; }
+.recent-list li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid var(--hairline-soft); }
+.recent-list li:first-child { border-top: 0; }
+.recent-list .n { width: 44px; flex: none; font-family: var(--display); color: var(--muted); }
+.recent-list .name { flex: 1; min-width: 0; }
+.recent-list .name a { font-weight: 700; color: var(--ink); }
+.recent-list .name small { display: block; color: var(--muted); font-size: 13px; }
+.btn-sm { height: 32px; padding: 0 12px; font-size: 13px; }
+
+@media (max-width: 760px) {
+  .admin { padding: 20px 16px 56px; }
+  .admin-grid { grid-template-columns: 1fr; }
+  .row2 { grid-template-columns: 1fr; }
+}

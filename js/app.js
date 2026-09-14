@@ -3,7 +3,11 @@
 (() => {
   "use strict";
 
-  const { meta, countries, scarves } = window.ALBUM;
+  // scarves.js is generated from the original site; additions.js holds scarves added in admin.html
+  const extra = window.ALBUM_ADDITIONS || { countries: {}, scarves: [] };
+  const meta = window.ALBUM.meta;
+  const countries = { ...window.ALBUM.countries, ...extra.countries };
+  const scarves = [...window.ALBUM.scarves, ...extra.scarves];
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -46,7 +50,7 @@
     .map(([key, value]) => ({ key, value, label: HOW[key].label, icon: HOW[key].icon, muted: key === "unrecorded" }))
     .sort((a, b) => a.muted - b.muted || b.value - a.value);
   const newCount = scarves.filter((s) => s.new).length;
-  const clubKey = (s) => (s.badge ? `b${s.badge.replace(/\D/g, "")}` : `n-${fold(s.club.replace(/\(.*?\)/g, "")).trim().replace(/[^\p{L}\p{N}]+/gu, "-")}`);
+  const clubKey = (s) => (s.badgeId ? `b${s.badgeId}` : s.badge ? `b${s.badge.replace(/\D/g, "")}` : `n-${fold(s.club.replace(/\(.*?\)/g, "")).trim().replace(/[^\p{L}\p{N}]+/gu, "-")}`);
   const clubName = (list) => list.map((x) => x.club.replace(/\s*\(.*?\)\s*/g, " ").trim()).sort((a, b) => a.length - b.length)[0];
   $$("[data-stat=total]").forEach((el) => { el.textContent = fmt(total); });
 
@@ -144,7 +148,7 @@
           <div class="hero-stats">
             <a class="stat stat-yellow" href="#/items?only=official"><b data-count="${official}">${official}</b><span>official club scarves</span></a>
             <a class="stat stat-blue" href="#/items?only=national"><b data-count="${national}">${national}</b><span>national teams</span></a>
-            ${newCount ? `<a class="stat stat-red" href="#/items?only=new"><b data-count="${newCount}">${newCount}</b><span>new on ${esc((meta.updatedOn || "").replace(/ \d{4}$/, ""))}</span></a>` : ""}
+            ${newCount ? `<a class="stat stat-red" href="#/items?only=new"><b data-count="${newCount}">${newCount}</b><span>${extra.scarves.length ? "new recently" : `new on ${esc((meta.updatedOn || "").replace(/ \d{4}$/, ""))}`}</span></a>` : ""}
           </div>
         </div>
       </section>
@@ -534,7 +538,7 @@
     const continentsWithScarves = continentRows.filter((r) => !r.muted).length;
 
     const kpis = [
-      { label: "Total scarves", value: fmt(total), note: newCount ? `${newCount} in the latest update` : `since ${meta.since}`, dot: "#3b82f6" },
+      { label: "Total scarves", value: fmt(total), note: newCount ? `${newCount} new recently` : `since ${meta.since}`, dot: "#3b82f6" },
       { label: "Countries", value: realCountries.length, note: `on ${continentsWithScarves} continents, plus ${countOf.get("Special editions") || 0} special scarves`, dot: "#8b5cf6" },
       { label: "Official club scarves", value: official, note: `${pct(official, total)} of the collection`, dot: "#f59e0b" },
       { label: "National teams", value: national.length, note: `from ${ntCountries} countries`, dot: "#34d399" },

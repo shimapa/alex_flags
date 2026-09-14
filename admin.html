@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Add a scarf — Football scarves</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400..700&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<main class="admin">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="./#/items">Football scarves</a><span>/</span><strong>Admin</strong></nav>
+
+  <header class="admin-head">
+    <h1 class="title">Add a scarf</h1>
+    <div class="who" id="who" hidden><span id="who-name"></span><button type="button" class="link-btn" id="sign-out">Sign out</button></div>
+  </header>
+
+  <!-- sign in -->
+  <section class="box admin-box" id="login" hidden>
+    <h2 class="box-title">Sign in with a GitHub token</h2>
+    <p class="hint">The site lives in the GitHub repository <b>shimapa/alex_flags</b>. Adding a scarf saves the photo and its details there, and the site updates in a minute or two. You need a token that can write to that repository.</p>
+    <details class="howto">
+      <summary>How to get a token</summary>
+      <ol>
+        <li><b>Owner of the repository:</b> open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">new fine-grained token</a>. Repository access: <i>Only select repositories</i>, pick <b>alex_flags</b>. Permissions: <i>Contents</i>, <b>Read and write</b>. Generate and copy it.</li>
+        <li><b>Collaborator (Alex):</b> accept the invitation to the repository first, then create a <a href="https://github.com/settings/tokens/new?scopes=public_repo&description=Football%20scarves%20admin" target="_blank" rel="noopener">classic token</a> with only the <b>public_repo</b> scope.</li>
+      </ol>
+    </details>
+    <form id="login-form" class="stack">
+      <label class="field"><span>Token</span><input type="password" id="token" autocomplete="off" spellcheck="false" required placeholder="github_pat_… or ghp_…"></label>
+      <label class="check"><input type="checkbox" id="remember" checked> Remember on this device</label>
+      <p class="error" id="login-error" role="alert" hidden></p>
+      <div><button class="btn btn-primary" type="submit" id="login-btn">Sign in</button></div>
+    </form>
+  </section>
+
+  <!-- add form -->
+  <form class="admin-grid" id="add-form" hidden novalidate>
+    <section class="box admin-box">
+      <h2 class="box-title">Photo</h2>
+      <label class="drop" id="drop">
+        <input type="file" id="photo" accept="image/*" required>
+        <span class="drop-text" id="drop-text"><b>Choose a photo</b> or drop it here<br><small>Laid flat on a plain background works best. It is resized to 1200 px before upload.</small></span>
+      </label>
+    </section>
+
+    <section class="box admin-box stack">
+      <h2 class="box-title">Team</h2>
+      <label class="field"><span>Name on the scarf's page</span><input id="club" required placeholder="Спартак Москва or Boca Juniors"></label>
+      <label class="field"><span>English name <small>(optional, used for search and badge lookup)</small></span><input id="club-en" placeholder="Spartak Moscow"></label>
+
+      <div class="field">
+        <span>Badge</span>
+        <div class="badge-pick" id="badge-pick"><p class="hint">Type the team name to look it up on TheSportsDB.</p></div>
+      </div>
+
+      <label class="field"><span>Country</span>
+        <select class="select" id="country" required></select>
+      </label>
+      <div class="new-country stack" id="new-country" hidden>
+        <label class="field"><span>Country name in English</span><input id="nc-name" placeholder="Iceland"></label>
+        <div class="row2">
+          <label class="field"><span>Continent</span><select class="select" id="nc-continent"></select></label>
+          <label class="field"><span>Flag code</span><input id="nc-code" placeholder="is" maxlength="6" spellcheck="false"></label>
+        </div>
+        <p class="hint">Flag code is the two-letter country code (is, fr, jp). For UK nations: gb-eng, gb-sct, gb-wls, gb-nir.</p>
+      </div>
+      <label class="check"><input type="checkbox" id="national"> National team</label>
+    </section>
+
+    <section class="box admin-box stack">
+      <h2 class="box-title">Story</h2>
+      <div class="row2">
+        <label class="field"><span>How it arrived</span><select class="select" id="how"></select></label>
+        <label class="field"><span>Year it joined</span><input id="year" inputmode="numeric" maxlength="4" placeholder="2026"></label>
+      </div>
+      <label class="check"><input type="checkbox" id="official"> Official club scarf</label>
+      <label class="field"><span>Collector's note</span><textarea id="note" rows="4" placeholder="Swapped with Luciano, sent from Buenos Aires."></textarea></label>
+      <label class="field"><span>Club website <small>(optional)</small></span><input id="site" placeholder="www.clubsite.com" spellcheck="false"></label>
+    </section>
+
+    <div class="admin-actions">
+      <p class="error" id="save-error" role="alert" hidden></p>
+      <p class="ok" id="save-ok" role="status" hidden></p>
+      <button class="btn btn-primary btn-big" type="submit" id="save-btn">Add to the collection</button>
+    </div>
+  </form>
+
+  <!-- recent additions -->
+  <section class="box admin-box" id="recent" hidden>
+    <h2 class="box-title">Added here</h2>
+    <p class="hint" id="recent-empty">Nothing added yet.</p>
+    <ul class="recent-list" id="recent-list"></ul>
+  </section>
+</main>
+
+<script src="data/scarves.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
