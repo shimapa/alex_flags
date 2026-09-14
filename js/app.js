@@ -71,7 +71,8 @@
 
   /* ------------------------------------------------------------ sidebar */
   const sidebar = $("#sidebar"), scrim = $("#scrim"), openNav = $("#open-nav");
-  const navCountries = byCountry.slice().sort((a, b) => (a[0] === "Special editions") - (b[0] === "Special editions") || a[0].localeCompare(b[0]));
+  // most scarves first (byCountry order: count, then name); special editions stay last
+  const navCountries = byCountry.slice().sort((a, b) => (a[0] === "Special editions") - (b[0] === "Special editions"));
   $("#nav-countries").innerHTML = navCountries.map(([c, n]) =>
     `<a class="nav-link" href="#/items?country=${encodeURIComponent(c)}" data-country="${esc(c)}">${flag(c)}<span>${esc(c)}</span><span class="nav-count">${n}</span></a>`).join("");
 
